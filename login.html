@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - Field Rental Website</title>
+    <link rel="stylesheet" href="login.css" />
+  </head>
+  <body>
+    <!-- Add this code to the beginning of the <body> tag in each HTML page -->
+    <div id="navbar-placeholder"></div>
+    <script>
+      (function () {
+        const xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function () {
+          if (this.readyState === 4 && this.status === 200) {
+            document.getElementById("navbar-placeholder").innerHTML =
+              this.responseText;
+          }
+        };
+        xhttp.open("GET", "navbar.html", true);
+        xhttp.send();
+      })();
+    </script>
+
+    <div class="container">
+      <form id="login-form" class="form" action="#" method="post">
+        <h2>Login</h2>
+        <div class="form-control">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" required />
+        </div>
+        <div class="form-control">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required />
+        </div>
+        <div class="form-control">
+          <button type="submit">Login</button>
+        </div>
+        <div class="form-control">
+          <p>Don't have an account? <a href="signup.html">Sign up</a></p>
+        </div>
+      </form>
+    </div>
+
+    <script>
+      const form = document.getElementById("login-form");
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        // Get form data
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+
+        // Check user credentials against dummy database
+        const users = [
+          { username: "user1", password: "password1" },
+          { username: "user2", password: "password2" },
+          { username: "user3", password: "password3" },
+        ];
+
+        const user = users.find(function (user) {
+          return user.username === username && user.password === password;
+        });
+
+        if (user) {
+          alert("Login successful!");
+          // Redirect to user dashboard or home page
+          window.location.href = "dashboard.html";
+        } else {
+          alert("Invalid username or password!");
+        }
+      });
+    </script>
+  </body>
+</html>
