@@ -1,0 +1,96 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+#user-profile {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: #f1f1f1;
+  border-bottom: 1px solid #ddd;
+}
+
+#profile-picture-container {
+  position: relative;
+}
+
+#profile-picture {
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+#upload-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 0.8rem;
+  padding: 2px 4px;
+  border-radius: 0 0 50% 0;
+  cursor: pointer;
+}
+
+#user-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 1rem;
+}
+
+#user-profile h2,
+#user-profile p {
+  margin: 0;
+}
+
+#edit-credentials,
+#post-field {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 0;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#edit-credentials:hover,
+#post-field:hover {
+  background-color: #0056b3;
+}
+
+#user-fields {
+  padding: 1rem;
+}
+
+.field-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.field-list > div {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.field-list h3 {
+  margin: 0;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}

@@ -4,10 +4,26 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="homepage.css" />
+    <title>Welcome To Cedar Fielder</title>
   </head>
   <body class="homepage">
     <div id="navbar-placeholder"></div>
+    <main>
+      <h1>Welcome to Sports Field Rentals!</h1>
+      <section id="lately-posted">
+        <h2>Lately Posted Fields</h2>
+        <div class="field-list" id="lately-posted-fields"></div>
+      </section>
+      <section id="most-rented">
+        <h2>Most Rented Fields</h2>
+        <div class="field-list" id="most-rented-fields"></div>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2023 Sports Field Rentals. All rights reserved.</p>
+    </footer>
+
     <script>
       (function () {
         const xhttp = new XMLHttpRequest();
@@ -21,5 +37,8 @@
         xhttp.send();
       })();
     </script>
+
+    <script src="homepage.js"></script>
+    <script src="navbar.js"></script>
   </body>
 </html>

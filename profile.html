@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile - Sports Field Rentals</title>
+    <link rel="stylesheet" href="profile.css" />
+  </head>
+  <body>
+    <div id="navbar-placeholder"></div>
+    <main>
+      <section id="user-profile">
+        <div id="profile-picture-container">
+          <img
+            id="profile-picture"
+            src="default-profile-picture.jpg"
+            alt="Profile picture"
+          />
+          <label for="upload-profile-picture" id="upload-label"
+            >Change Picture</label
+          >
+          <input
+            type="file"
+            id="upload-profile-picture"
+            style="display: none"
+          />
+        </div>
+        <div id="user-info">
+          <h2 id="username">Username</h2>
+          <p id="email">user@example.com</p>
+          <button id="edit-credentials">Edit Credentials</button>
+          <button id="post-field">Post a Field</button>
+        </div>
+      </section>
+      <section id="user-fields">
+        <h2>My Fields</h2>
+        <div class="field-list" id="my-posted-fields"></div>
+        <h2>Saved Fields</h2>
+        <div class="field-list" id="saved-fields"></div>
+        <h2>Rented Fields</h2>
+        <div class="field-list" id="rented-fields"></div>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2023 Sports Field Rentals. All rights reserved.</p>
+    </footer>
+    <script>
+      (function () {
+        const xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function () {
+          if (this.readyState === 4 && this.status === 200) {
+            document.getElementById("navbar-placeholder").innerHTML =
+              this.responseText;
+          }
+        };
+        xhttp.open("GET", "navbar.html", true);
+        xhttp.send();
+      })();
+    </script>
+    <script src="profile.js"></script>
+  </body>
+</html>
