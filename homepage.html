@@ -4,11 +4,30 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
     <link rel="stylesheet" href="homepage.css" />
     <title>Welcome To Cedar Fielder</title>
   </head>
   <body class="homepage">
+    <!--NAVBAR-->
     <div id="navbar-placeholder"></div>
+    <script>
+      (function () {
+        const xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function () {
+          if (this.readyState === 4 && this.status === 200) {
+            document.getElementById("navbar-placeholder").innerHTML =
+              this.responseText;
+          }
+        };
+        xhttp.open("GET", "navbar.html", true);
+        xhttp.send();
+      })();
+    </script>
     <main>
       <h1>Welcome to Sports Field Rentals!</h1>
       <section id="lately-posted">
@@ -23,22 +42,7 @@
     <footer>
       <p>&copy; 2023 Sports Field Rentals. All rights reserved.</p>
     </footer>
-
-    <script>
-      (function () {
-        const xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function () {
-          if (this.readyState === 4 && this.status === 200) {
-            document.getElementById("navbar-placeholder").innerHTML =
-              this.responseText;
-          }
-        };
-        xhttp.open("GET", "navbar.html", true);
-        xhttp.send();
-      })();
-    </script>
-
+    <!--SCRIPT-->
     <script src="homepage.js"></script>
-    <script src="navbar.js"></script>
   </body>
 </html>

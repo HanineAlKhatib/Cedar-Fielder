@@ -7,12 +7,15 @@
 body {
   background-color: #f2f2f2;
   font-family: Arial, sans-serif;
+  background-image: url(field.jfif);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
+  max-width: 960px;
+  margin-right: 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,18 +24,17 @@ body {
 
 .form {
   background-color: #fff;
-  padding: 40px;
-  border-radius: 5px;
+  padding: 80px;
+  border-radius: 10px;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
   width: 100%;
-  max-width: 400px;
+  max-width: 600px;
 }
 
-h2 {
-  font-size: 24px;
+h1 {
   margin-bottom: 20px;
   text-align: center;
-  color: #333;
+  color: #4caf50;
 }
 
 .form-control {
@@ -54,19 +56,23 @@ input[type="password"] {
   width: 100%;
 }
 
-button {
-  background-color: #ff9800;
+.lgin-btn {
+  background-color: #4caf50;
   color: #fff;
   padding: 10px 20px;
-  border-radius: 5px;
+  border-radius: 15px;
   border: none;
   cursor: pointer;
-  transition: all 0.3s ease-in-out;
-  width: 100%;
+  transition: all 0.2s ease-in-out;
+  width: 50%;
 }
 
-button:hover {
-  background-color: #f44336;
+.lgin-btn:hover {
+  background-color: white;
+  color: #4caf50;
+  box-shadow: gray 1px 1px 10px 1px;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 p {
@@ -74,9 +80,13 @@ p {
   text-align: center;
 }
 
-a {
-  color: #ff9800;
+.form-group .text-link {
+  color: #4caf50;
+  font-weight: bold;
   text-decoration: none;
+}
+.form-group .text-link:hover {
+  text-decoration: underline;
 }
 
 @media screen and (max-width: 768px) {

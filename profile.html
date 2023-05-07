@@ -4,18 +4,34 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Profile - Sports Field Rentals</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
     <link rel="stylesheet" href="profile.css" />
   </head>
   <body>
+    <!--NAVBAR-->
     <div id="navbar-placeholder"></div>
+    <script>
+      (function () {
+        const xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function () {
+          if (this.readyState === 4 && this.status === 200) {
+            document.getElementById("navbar-placeholder").innerHTML =
+              this.responseText;
+          }
+        };
+        xhttp.open("GET", "navbar.html", true);
+        xhttp.send();
+      })();
+    </script>
+    <!--END NAVBAR-->
     <main>
       <section id="user-profile">
         <div id="profile-picture-container">
-          <img
-            id="profile-picture"
-            src="default-profile-picture.jpg"
-            alt="Profile picture"
-          />
+          <img id="profile-picture" alt="Profile picture" />
           <label for="upload-profile-picture" id="upload-label"
             >Change Picture</label
           >
@@ -44,19 +60,7 @@
     <footer>
       <p>&copy; 2023 Sports Field Rentals. All rights reserved.</p>
     </footer>
-    <script>
-      (function () {
-        const xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function () {
-          if (this.readyState === 4 && this.status === 200) {
-            document.getElementById("navbar-placeholder").innerHTML =
-              this.responseText;
-          }
-        };
-        xhttp.open("GET", "navbar.html", true);
-        xhttp.send();
-      })();
-    </script>
+    <!--SCRIPT-->
     <script src="profile.js"></script>
   </body>
 </html>

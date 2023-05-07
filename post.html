@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="post.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <title>Post A Field</title>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <div id="navbar-placeholder"></div>
+    <script>
+      (function () {
+        const xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function () {
+          if (this.readyState === 4 && this.status === 200) {
+            document.getElementById("navbar-placeholder").innerHTML =
+              this.responseText;
+          }
+        };
+        xhttp.open("GET", "navbar.html", true);
+        xhttp.send();
+      })();
+    </script>
+    <h1>Post a Field</h1>
+    <form action="submit-field.php" method="POST" enctype="multipart/form-data">
+      <div>
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location" required />
+      </div>
+      <div>
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" required></textarea>
+      </div>
+      <div>
+        <label for="sport-types">Sport Types:</label>
+        <input type="text" id="sport-types" name="sport-types" required />
+      </div>
+      <div>
+        <label for="size">Size:</label>
+        <input type="text" id="size" name="size" required />
+      </div>
+      <div>
+        <label for="indoor-outdoor">Indoor/Outdoor:</label>
+        <select id="indoor-outdoor" name="indoor-outdoor" required>
+          <option value="indoor">Indoor</option>
+          <option value="outdoor">Outdoor</option>
+        </select>
+      </div>
+      <div>
+        <label for="image">Image:</label>
+        <input type="file" id="image" name="image" accept="image/*" required />
+      </div>
+      <div>
+        <label for="price">Price:</label>
+        <input
+          type="number"
+          id="price"
+          name="price"
+          min="0"
+          step="0.01"
+          required
+        />
+      </div>
+      <div>
+        <label for="rent-period">Rent Period:</label>
+        <select id="rent-period" name="rent-period" required>
+          <option value="hour">Per Hour</option>
+          <option value="day">Per Day</option>
+          <option value="month">Per Month</option>
+        </select>
+      </div>
+      <div>
+        <label for="status">Status:</label>
+        <select id="status" name="status" required>
+          <option value="available">Available</option>
+          <option value="rented">Rented</option>
+        </select>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+    <!--SCRIPT-->
+    <script src="post.js"></script>
+  </body>
+</html>

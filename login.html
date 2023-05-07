@@ -3,11 +3,16 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login - Field Rental Website</title>
+    <title>Login - Cedar Fielder</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
     <link rel="stylesheet" href="login.css" />
   </head>
   <body>
-    <!-- Add this code to the beginning of the <body> tag in each HTML page -->
+    <!-- NAVBAR -->
     <div id="navbar-placeholder"></div>
     <script>
       (function () {
@@ -22,26 +27,47 @@
         xhttp.send();
       })();
     </script>
+    <!-- CONTAINER -->
 
-    <div class="container">
-      <form id="login-form" class="form" action="#" method="post">
-        <h2>Login</h2>
-        <div class="form-control">
-          <label for="username">Username</label>
-          <input type="text" id="username" name="username" required />
+    <div class="container justify-content-end">
+      <div class="row p-3 justify-content-center">
+        <div class="col-md-12">
+          <form id="login-form" class="form">
+            <h1>Welcome Back!</h1>
+            <div class="form-group">
+              <label for="username">Username</label>
+              <input
+                type="text"
+                class="form-control"
+                id="username"
+                name="username"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input
+                type="password"
+                class="form-control"
+                id="password"
+                name="password"
+                required
+              />
+            </div>
+            <div class="form-group text-center">
+              <button class="lgin-btn" type="submit">Log In</button>
+            </div>
+            <div class="form-group">
+              <p>
+                Don't have an account?
+                <a class="text-link" href="signup.html">Sign up</a>
+              </p>
+            </div>
+          </form>
         </div>
-        <div class="form-control">
-          <label for="password">Password</label>
-          <input type="password" id="password" name="password" required />
-        </div>
-        <div class="form-control">
-          <button type="submit">Login</button>
-        </div>
-        <div class="form-control">
-          <p>Don't have an account? <a href="signup.html">Sign up</a></p>
-        </div>
-      </form>
+      </div>
     </div>
+    <!-- SCRIPT -->
 
     <script src="login.js"></script>
   </body>

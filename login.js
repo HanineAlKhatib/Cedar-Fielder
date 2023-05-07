@@ -1,20 +1,4 @@
 const form = document.getElementById("login-form");
-
-
-document.getElementById('login-form').addEventListener('submit', function (event) {
-  event.preventDefault();
-
-  // Replace this with actual AJAX call for user authentication
-  const username = document.getElementById('username').value;
-  const password = document.getElementById('password').value;
-
-if (!username || !password) {
-alert('Please enter your username and password.');
-return;
-}
-}
-
-
 form.addEventListener("submit", function (event) {
   event.preventDefault();
 
@@ -27,16 +11,21 @@ form.addEventListener("submit", function (event) {
     { username: "user1", password: "password1" },
     { username: "user2", password: "password2" },
     { username: "user3", password: "password3" },
+    { username: "hanine", password: "hanine" },
   ];
 
   const user = users.find(function (user) {
     return user.username === username && user.password === password;
   });
 
+  if (!username || !password) {
+    alert("Please enter your username and password.");
+    return;
+  }
+
   if (user) {
     alert("Login successful!");
-    // Redirect to user dashboard or home page
-    window.location.href = "dashboard.html";
+    window.location.href = "homepage.html";
   } else {
     alert("Invalid username or password!");
   }

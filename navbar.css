@@ -27,8 +27,9 @@ body {
 }
 
 .nav-btn {
-  font-size: 14px;
-  color: white;
+  font-size: 15px;
+  color: #ffffff;
+  padding: 20px 20px;
   background-color: transparent;
   border: none;
   margin-right: 15px;
@@ -37,5 +38,5 @@ body {
 }
 
 .nav-btn:hover {
-  color: #f0f0f0;
+  color: rgb(255, 191, 0);
 }
