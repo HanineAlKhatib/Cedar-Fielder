@@ -12,20 +12,32 @@ document.addEventListener("DOMContentLoaded", function () {
     { name: "Field Z", location: "City Z", timesRented: 35 },
   ];
 
+  // Display field information in the DOM
   function createFieldElement(field, isMostRented = false) {
     const fieldDiv = document.createElement("div");
+    fieldDiv.classList.add("field");
+
+    const fieldImg = document.createElement("img");
+    fieldImg.src = "https://via.placeholder.com/250x200.png?text=Field+Image";
+    fieldImg.alt = "Field Image";
+    fieldDiv.appendChild(fieldImg);
+
+    const fieldInfo = document.createElement("div");
+    fieldInfo.classList.add("field-info");
+    fieldDiv.appendChild(fieldInfo);
+
     const fieldName = document.createElement("h3");
     fieldName.textContent = field.name;
-    fieldDiv.appendChild(fieldName);
+    fieldInfo.appendChild(fieldName);
 
     const fieldLocation = document.createElement("p");
     fieldLocation.textContent = field.location;
-    fieldDiv.appendChild(fieldLocation);
+    fieldInfo.appendChild(fieldLocation);
 
     if (isMostRented) {
       const fieldTimesRented = document.createElement("p");
-      fieldTimesRented.textContent = `Times rented: ${field.timesRented}`;
-      fieldDiv.appendChild(fieldTimesRented);
+      fieldTimesRented.textContent = `Times Rented: ${field.timesRented}`;
+      fieldInfo.appendChild(fieldTimesRented);
     }
 
     return fieldDiv;
@@ -41,4 +53,50 @@ document.addEventListener("DOMContentLoaded", function () {
 
   displayFields(latelyPostedFields, "lately-posted-fields");
   displayFields(mostRentedFields, "most-rented-fields", true);
+
+  // Slider functionality
+  const sliderItems = document.querySelectorAll(".slider-item");
+  const sliderNavItems = document.querySelectorAll(".slider-nav-item");
+
+  let currentIndex = 0;
+
+  function showSlide(index) {
+    if (index < 0 || index >= sliderItems.length) {
+      return;
+    }
+
+    sliderItems[currentIndex].classList.remove("active");
+    sliderNavItems[currentIndex].classList.remove("active");
+
+    currentIndex = index;
+
+    sliderItems[currentIndex].classList.add("active");
+    sliderNavItems[currentIndex].classList.add("active");
+  }
+
+  function nextSlide() {
+    const nextIndex = (currentIndex + 1) % sliderItems.length;
+    showSlide(nextIndex);
+  }
+
+  function previousSlide() {
+    const prevIndex =
+      (currentIndex - 1 + sliderItems.length) % sliderItems.length;
+    showSlide(prevIndex);
+  }
+
+  function handleNavItemClick(index) {
+    return function () {
+      showSlide(index);
+    };
+  }
+
+  // Attach click event listeners to slider navigation items
+  sliderNavItems.forEach((item, index) => {
+    item.addEventListener("click", handleNavItemClick(index));
+  });
+
+  // Automatically switch to the next slide every 5 seconds
+  setInterval(nextSlide, 5000);
 });
+s
