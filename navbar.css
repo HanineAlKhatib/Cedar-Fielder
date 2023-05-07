@@ -36,8 +36,13 @@ body {
   margin-right: 15px;
   cursor: pointer;
   transition: color 0.3s;
+  border: none;
 }
 
 .nav-btn:hover {
   color: rgb(255, 191, 0);
+}
+.nav-btn:focus {
+  outline: none;
+  font-weight: 700;
 }
