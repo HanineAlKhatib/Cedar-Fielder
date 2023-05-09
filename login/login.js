@@ -24,8 +24,7 @@ form.addEventListener("submit", function (event) {
   }
 
   if (user) {
-    alert("Login successful!");
-    window.location.href = "homepage.html";
+    window.location.href = "../homepage/homepage.html";
   } else {
     alert("Invalid username or password!");
   }
