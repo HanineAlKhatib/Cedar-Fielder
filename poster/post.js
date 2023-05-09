@@ -4,27 +4,33 @@ form.addEventListener("submit", (event) => {
   event.preventDefault();
 
   // Get form data
+  const name = document.getElementById("name").value;
+  const size = document.getElementById("size").value;
+  const sportTypes = document.getElementById("sport-types").value;
   const location = document.getElementById("location").value;
   const description = document.getElementById("description").value;
-  const sportTypes = document.getElementById("sport-types").value;
-  const size = document.getElementById("size").value;
   const indoorOutdoor = document.getElementById("indoor-outdoor").value;
-  const picture = document.getElementById("picture").value;
-  const price = document.getElementById("price").value;
-  const priceType = document.getElementById("price-type").value;
   const status = document.getElementById("status").value;
+  const availability = document.getElementById("availability").value;
+  const calendar = document.getElementById("calendar").value;
+  const image = document.getElementById("image").value;
+  const price = document.getElementById("price").value;
+  const rentPeriod = document.getElementById("rent-period").value;
 
   // Validate form data
   if (
+    !name ||
+    !size ||
+    !sportTypes ||
     !location ||
     !description ||
-    !sportTypes ||
-    !size ||
     !indoorOutdoor ||
-    !picture ||
+    !status ||
+    !availability ||
+    !calendar ||
+    !image ||
     !price ||
-    !priceType ||
-    !status
+    !rentPeriod
   ) {
     alert("Please fill out all fields.");
     return;

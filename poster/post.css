@@ -1,93 +1,18 @@
 body {
   font-family: "Montserrat", sans-serif;
-}
-/* Post a Field Page */
-.post-field {
   background-color: #f7f7f7;
-  padding: 50px;
 }
 
-.post-field h1 {
+h1 {
   font-size: 36px;
   font-weight: bold;
-  margin-bottom: 20px;
-  text-align: center;
 }
 
-.post-field label {
+label {
   font-size: 18px;
   font-weight: bold;
-  margin-bottom: 10px;
 }
 
-.post-field input,
-.post-field select {
-  font-size: 16px;
-  padding: 10px;
-  margin-bottom: 20px;
-  width: 100%;
-  border: none;
-  border-radius: 5px;
-  background-color: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.post-field textarea {
-  font-size: 16px;
-  padding: 10px;
-  margin-bottom: 20px;
-  width: 100%;
-  height: 150px;
-  border: none;
-  border-radius: 5px;
-  background-color: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.post-field input[type="file"] {
-  display: none;
-}
-
-.post-field .upload-btn {
-  font-size: 16px;
-  font-weight: bold;
-  padding: 10px;
-  margin-bottom: 20px;
-  width: 100%;
-  border: none;
-  border-radius: 5px;
-  background-color: #3498db;
-  color: #fff;
-  cursor: pointer;
-}
-
-.post-field .upload-btn:hover {
-  background-color: #2980b9;
-}
-
-.post-field .submit-btn {
-  font-size: 16px;
-  font-weight: bold;
-  padding: 10px;
-  width: 100%;
-  border: none;
-  border-radius: 5px;
-  background-color: #2ecc71;
-  color: #fff;
-  cursor: pointer;
-}
-
-.post-field .submit-btn:hover {
-  background-color: #27ae60;
-}
-
-.post-field .form-group {
-  margin-bottom: 30px;
-}
-
-.post-field .form-group:last-child {
-  margin-bottom: 0;
-}
 footer {
   background-color: #333;
   color: white;

@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const savedFields = [
     { name: "Saved Field A", location: "City A" },
-    { name: "Saved Field B", location: "City B" },
+    { name: "Saved FieldB", location: "City B" },
   ];
 
   const rentedFields = [
@@ -38,11 +38,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function createFieldElement(field) {
     const fieldDiv = document.createElement("div");
+    fieldDiv.classList.add("field-card");
+
     const fieldName = document.createElement("h3");
     fieldName.textContent = field.name;
     fieldDiv.appendChild(fieldName);
 
-    const fieldLocation = document.createElement("p");
+    const fieldLocsation = document.createElement("p");
     fieldLocation.textContent = field.location;
     fieldDiv.appendChild(fieldLocation);
 
