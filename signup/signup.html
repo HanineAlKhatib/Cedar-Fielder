@@ -13,6 +13,7 @@
       type="text/css"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     />
+    <link rel="stylesheet" href="../header/header.css" />
     <link rel="stylesheet" href="signup.css" />
 
     <title>Sign Up</title>
@@ -29,7 +30,7 @@
               this.responseText;
           }
         };
-        xhttp.open("GET", "navbar.html", true);
+        xhttp.open("GET", "../header/header.html", true);
         xhttp.send();
       })();
     </script>
@@ -83,7 +84,7 @@
               </div>
 
               <div class="form-group text-center">
-                <button class="signup-btn" type="submit">Sign Up</button>
+                <button class="sgnup-btn" type="submit">Sign Up</button>
               </div>
             </form>
 
@@ -100,5 +101,7 @@
     </footer>
     <!--SCRIPT-->
     <script src="signup.js"></script>
+    <script src="../header/header.js"></script>
+
   </body>
 </html>

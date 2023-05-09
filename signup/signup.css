@@ -18,7 +18,7 @@ h1 {
   color: #4caf50;
 }
 
-label {
+form label {
   font-size: 15px;
   font-weight: bold;
   color: #666;
@@ -58,7 +58,7 @@ input[type="submit"]:hover {
   box-shadow: gray 1px 1px 10px 1px;
   font-weight: bold;
 }
-.signup-btn {
+.sgnup-btn {
   background-color: #4caf50;
   color: #fff;
   padding: 10px 20px;
@@ -69,7 +69,7 @@ input[type="submit"]:hover {
   width: 50%;
 }
 
-.signup-btn:hover {
+.sgnup-btn:hover {
   background-color: white;
   color: #4caf50;
   box-shadow: gray 1px 1px 10px 1px;
