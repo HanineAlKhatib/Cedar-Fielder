@@ -23,20 +23,16 @@
   </head>
   <body class="homepage">
     <!--NAVBAR-->
-    <div id="navbar-placeholder"></div>
-    <script>
-      (function () {
-        const xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function () {
-          if (this.readyState === 4 && this.status === 200) {
-            document.getElementById("navbar-placeholder").innerHTML =
-              this.responseText;
-          }
-        };
-        xhttp.open("GET", "../header/header.html", true);
-        xhttp.send();
-      })();
-    </script>
+    <div id="navbar-placeholder">
+      
+    </div>
+
+<?php
+require_once('../header/header.php');
+
+
+?>
+
     <!--END OF NAVBAR-->
     <!--SLIDER-->
     <div class="slider-container">
