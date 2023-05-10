@@ -1,6 +1,9 @@
 <?php
-require_once('../Backend/db_config.php');
+require_once('./Backend/db_config.php');
+require_once './Backend/cookie.php';
+Cookie::set('user', ['name' => 'John Doe', 'email' => 'johndoe@example.com']);
 
+$user = Cookie::get('');
 ?>
 
 
@@ -13,7 +16,7 @@ require_once('../Backend/db_config.php');
   <title>Cedar Fielder</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
   <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="header.css" />
+  <link rel="stylesheet" href="header/header.css" />
 </head>
 
 <body>

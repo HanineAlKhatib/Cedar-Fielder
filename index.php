@@ -1,3 +1,8 @@
+
+<?php
+require_once('header/header.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -16,7 +21,6 @@
       type="text/css"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     />
-    <link rel="stylesheet" href="../header/header.css" />
 
     <link rel="stylesheet" href="homepage.css" />
     <title>Welcome To Cedar Fielder</title>
@@ -27,24 +31,19 @@
       
     </div>
 
-<?php
-require_once('../header/header.php');
-
-
-?>
 
     <!--END OF NAVBAR-->
     <!--SLIDER-->
     <div class="slider-container">
       <div class="slider-item active">
-        <img src="../images/field.jfif" alt="Slider Image 1" />
+        <img src="images/field.jfif" alt="Slider Image 1" />
         <div class="slider-text">
           <h2>Rent a Sports Field</h2>
           <p>Book your favorite sports field with ease and convenience.</p>
         </div>
       </div>
       <div class="slider-item">
-        <img src="../images/field.jfif" alt="Slider Image 2" />
+        <img src="images/field.jfif" alt="Slider Image 2" />
         <div class="slider-text">
           <h2>Post a Field to Sell or Rent</h2>
           <p>
@@ -53,7 +52,7 @@ require_once('../header/header.php');
         </div>
       </div>
       <div class="slider-item">
-        <img src="../images/field.jfif" alt="Slider Image 3" />
+        <img src="images/field.jfif" alt="Slider Image 3" />
         <div class="slider-text">
           <h2>Manage Your Postings as You Wish</h2>
           <p>
@@ -101,6 +100,5 @@ require_once('../header/header.php');
     <!--SCRIPT-->
     <script src="homepage.js"></script>
     <script src="browse.js"></script>
-    <script src="../header/header.js"></script>
   </body>
 </html>

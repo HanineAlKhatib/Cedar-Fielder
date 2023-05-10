@@ -1,3 +1,8 @@
+<?php
+require_once 'cookie.php';
+?>
+
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -37,7 +42,7 @@
     <div class="container justify-content-end">
       <div class="row p-3 justify-content-center">
         <div class="col-md-12">
-          <form id="login-form" class="form">
+          <form id="login-form" class="form" action="/Backend/login_credentials.php">
             <h1>Welcome Back!</h1>
             <div class="form-group">
               <label for="username">Username</label>
