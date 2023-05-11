@@ -9,9 +9,6 @@ form.addEventListener("submit", (event) => {
   const password = document.getElementById("password").value;
   const dateOfBirth = document.getElementById("dateOfBirth").value;
   const phoneNumber = document.getElementById("phoneNumber").value;
-  const userType = document.getElementById("userType").value;
-   const userTypeValue = (userType === "owner") ? "1" : "0";
-  console.log(userType);
 
   // Define a regular expression to check the password
   // const passwordRegex = /^(?=.*\d)(?=.*[!@#$%^&*.-])(?=.*[A-Z]).{8,}$/;
@@ -32,15 +29,13 @@ form.addEventListener("submit", (event) => {
       password: password,
       dateOfBirth: dateOfBirth,
       phoneNumber: phoneNumber,
-      userType: userTypeValue,
+     
     },
     success: function(response) {
       if (response.success) {
-        if (response.message === "owner") {
-          window.location.href = '/cedar-fielder/ownerPage.php';
-        } else {
+         
           window.location.href = '/cedar-fielder/index.php';
-        }
+        
       } else {
           alert(response.message);
           $('.error').remove();
