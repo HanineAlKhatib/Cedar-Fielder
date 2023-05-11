@@ -40,7 +40,18 @@ document.addEventListener("DOMContentLoaded", function () {
       fieldInfo.appendChild(fieldTimesRented);
     }
 
-    return fieldDiv;
+    // Create an anchor element <a> and wrap the field div inside it
+    const fieldLink = document.createElement("a");
+    fieldLink.href = `/cedar-fielder/field/field.php/?id=${field.id}`;
+    fieldLink.appendChild(fieldDiv);
+
+    // Add event listener to navigate to the field page on click
+    fieldLink.addEventListener("click", (event) => {
+      event.preventDefault();
+      window.location.href = fieldLink.href;
+    });
+
+    return fieldLink;
   }
 
   function displayFields(fields, containerId, isMostRented = false) {
