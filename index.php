@@ -2,7 +2,7 @@
 <?php
 require_once('header/header.php');
 
-$fields = $table->findSql("Select * from ")
+// $fields = $table->findSql("Select * from ")
 ?>
 
 <!DOCTYPE html>
