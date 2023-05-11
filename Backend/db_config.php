@@ -1,7 +1,5 @@
 <?php
 
-ini_set('display_errors', 1);
-error_reporting(E_ALL);
 
 try {
     // Establish a database connection using PDO
@@ -13,6 +11,8 @@ try {
     echo "Error: " . $e->getMessage();
 }
 
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
 class Table {
     protected $pdo;
 

@@ -99,4 +99,3 @@ document.addEventListener("DOMContentLoaded", function () {
   // Automatically switch to the next slide every 5 seconds
   setInterval(nextSlide, 5000);
 });
-s

@@ -1,31 +1,33 @@
-const form = document.getElementById("login-form");
-form.addEventListener("submit", function (event) {
-  event.preventDefault();
+$(document).ready(function() {
+  $('#login-form').submit(function(e) {
+      e.preventDefault();
+      var username = $('input[name="username"]').val();
+      var password = $('input[name="password"]').val();
 
-  // Get form data
-  const username = document.getElementById("username").value;
-  const password = document.getElementById("password").value;
-
-  // Check user credentials against dummy database
-  const users = [
-    { username: "user1", password: "password1" },
-    { username: "user2", password: "password2" },
-    { username: "user3", password: "password3" },
-    { username: "hanine", password: "hanine" },
-  ];
-
-  const user = users.find(function (user) {
-    return user.username === username && user.password === password;
+      if (username === '' || password === '') {
+          alert('Please enter your username and password.');
+      } else {
+          // Submit form to server
+          $.ajax({
+              type: 'POST',
+              url: '/cedar-fielder/Backend/login_credentials.php',
+              data: {
+                  username: username,
+                  password: password
+              },
+              success: function(response) {
+                  if (response.success) {
+                      window.location.href = '/cedar-fielder/index.php';
+                  } else {
+                      alert(response.message);
+                      $('.error').remove();
+                      $('form').append('<p style="color:red">' + response.message + '</p>');
+                  }
+              },
+              error: function() {
+                  alert('There was an error processing your request.');
+              }
+          });
+      }
   });
-
-  if (!username || !password) {
-    alert("Please enter your username and password.");
-    return;
-  }
-
-  if (user) {
-    window.location.href = "../homepage/homepage.html";
-  } else {
-    alert("Invalid username or password!");
-  }
 });

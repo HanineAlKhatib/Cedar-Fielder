@@ -1,9 +1,18 @@
 <?php
 require_once('./Backend/db_config.php');
-require_once './Backend/cookie.php';
-Cookie::set('user', ['name' => 'John Doe', 'email' => 'johndoe@example.com']);
 
-$user = Cookie::get('');
+
+
+
+
+if(!isset($_COOKIE['username'])){
+  echo "<script>window.location = '/cedar-fielder/login/login.php'</script>";
+}
+
+$username = $_COOKIE['username'];
+$user_id = $_COOKIE['user_id'];
+$name = $_COOKIE['name'];
+$dob = $_COOKIE['dob'];
 ?>
 
 
@@ -17,6 +26,7 @@ $user = Cookie::get('');
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
   <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
   <link rel="stylesheet" href="header/header.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
 <body>
@@ -25,15 +35,15 @@ $user = Cookie::get('');
   <nav class="nav">
     <div class="navbar-brand">Cedar Fielder</div>
     <div class="navbar-buttons">
-
+    <h1><?=$username?></h1>
       <div class="dropdown">
         <button class="dropbtn">
         <img src="https://via.placeholder.com/40x40.png?text=Profile" alt="Profile" class="profile-logo">
 
         </button>
-        <div class="dropdown-content">
+        <div class="dropdown-content"> 
           <a href="#">My Profile</a>
-          <a href="#">Sign Out</a>
+          <a href="./login/login.php">Sign Out</a>
         </div>
       </div>
     </div>
