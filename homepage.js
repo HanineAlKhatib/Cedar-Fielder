@@ -62,8 +62,9 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  displayFields(latelyPostedFields, "lately-posted-fields");
+  displayFields(latestFields, "latest-fields");
   displayFields(mostRentedFields, "most-rented-fields", true);
+
 
   // Slider functionality
   const sliderItems = document.querySelectorAll(".slider-item");

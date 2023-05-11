@@ -38,7 +38,7 @@ $dob = $_COOKIE['dob'];
 
         </button>
         <div class="dropdown-content"> 
-          <a href="#">My Profile</a>
+          <a href="../profile/profile.php">My Profile</a>
           <a href="./login/login.php">Sign Out</a>
         </div>
       </div>
