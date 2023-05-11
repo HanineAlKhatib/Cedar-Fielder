@@ -9,7 +9,7 @@ $searchedFields = $table->findSql($query);
 require_once('slider.php')
 ?>
 
-
+<main>
 <h1>Welcome to Sports Field Rentals!</h1>
     <section id="lately-posted">
       <h3>Browse</h3>
@@ -31,3 +31,4 @@ require_once('slider.php')
         <?php endforeach; ?>
       </div>
     </section>
+</main>
