@@ -49,7 +49,6 @@ if ($insertResult) {
     setcookie('user_id',$pdo->lastInsertId(), time() + (86400 * 30), "/");
     setcookie('phone_number', $phoneNumber, time() + (86400 * 30), "/");
     setcookie('dob', $dateOfBirth, time() + (86400 * 30), "/");
-    setcookie('userType', $userType, time() + (86400 * 30), "/");
     header('Content-Type: application/json');
     
         echo json_encode([
