@@ -9,6 +9,7 @@ form.addEventListener("submit", (event) => {
   const password = document.getElementById("password").value;
   const dateOfBirth = document.getElementById("dateOfBirth").value;
   const phoneNumber = document.getElementById("phoneNumber").value;
+  const userType = document.getElementById("userType").value;
 
   // Define a regular expression to check the password
   // const passwordRegex = /^(?=.*\d)(?=.*[!@#$%^&*.-])(?=.*[A-Z]).{8,}$/;
@@ -29,6 +30,7 @@ form.addEventListener("submit", (event) => {
       password: password,
       dateOfBirth: dateOfBirth,
       phoneNumber: phoneNumber,
+      userType: userType,
     },
     success: function(response) {
       if (response.success) {
@@ -36,7 +38,6 @@ form.addEventListener("submit", (event) => {
       } else {
           alert(response.message);
           $('.error').remove();
-          $('form').append('<p style="color:red">' + response.message + '</p>');
           alert(response.message)
       }
   },

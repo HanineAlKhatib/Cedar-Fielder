@@ -21,7 +21,7 @@ $(document).ready(function() {
                   } else {
                       alert(response.message);
                       $('.error').remove();
-                      $('form').append('<p style="color:red">' + response.message + '</p>');
+                      alert(response.message);
                   }
               },
               error: function() {

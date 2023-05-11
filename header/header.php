@@ -35,7 +35,7 @@ $dob = $_COOKIE['dob'];
   <nav class="nav">
     <div class="navbar-brand">Cedar Fielder</div>
     <div class="navbar-buttons">
-    <h1><?=$username?></h1>
+    
       <div class="dropdown">
         <button class="dropbtn">
         <img src="https://via.placeholder.com/40x40.png?text=Profile" alt="Profile" class="profile-logo">
