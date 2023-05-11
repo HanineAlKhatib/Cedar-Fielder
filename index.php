@@ -86,11 +86,33 @@ echo '</script>';
     <h1>Welcome to Sports Field Rentals!</h1>
     <section id="lately-posted">
       <h3>Lately Posted Fields</h3>
-      <div class="field-list" id="lately-posted-fields"></div>
+      <div class="field-list" id="lately-posted-fields">
+        <?php foreach ($latestFields as $field) : ?>
+          <a href="/cedar-fielder/field/field.php/?id=<?php echo $field->id; ?>" class="field">
+            <img src="#" alt="Field Image" />
+            <div class="field-info">
+              <h3><?php echo $field->name; ?></h3>
+              <p><?php echo $field->location; ?></p>
+            </div>
+          </a>
+        <?php endforeach; ?>
+      </div>
     </section>
+
     <section id="most-rented">
       <h3>Most Rented Fields</h3>
-      <div class="field-list" id="most-rented-fields"></div>
+      <div class="field-list" id="most-rented-fields">
+        <?php foreach ($mostRentedFields as $field) : ?>
+          <a href="/cedar-fielder/field/field.php/?id=<?php echo $field->id; ?>" class="field">
+            <img src="#" alt="Field Image" />
+            <div class="field-info">
+              <h3><?php echo $field->name; ?></h3>
+              <p><?php echo $field->location; ?></p>
+              <p>Times Rented: <?php echo $field->rentCount; ?></p>
+            </div>
+          </a>
+        <?php endforeach; ?>
+      </div>
     </section>
   </main>
   <!--END OF MAIN-->
