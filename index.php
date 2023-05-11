@@ -7,6 +7,7 @@ $mostRentedFields = $table->findSql("
     FROM fields AS f
     LEFT JOIN rent_fields AS r ON f.id = r.field_id
     GROUP BY f.id
+    Order by rentCount desc
 ");
 
 
@@ -90,7 +91,7 @@ echo '</script>';
         <?php foreach ($latestFields as $field) : ?>
 
           <div>
-            <a href="/cedar-fielder/field/field.php/?id=<?= $field['id']; ?>" class="field">
+            <a href="/cedar-fielder/field/field.php?id=<?= $field['id']; ?>" class="field">
 
               <img src="<?= $field['image_url']; ?>" alt="Field Image" />
 
@@ -110,7 +111,7 @@ echo '</script>';
       <div class="field-list" id="most-rented-fields">
         <?php foreach ($mostRentedFields as $field) : ?>
           <div>
-          <a href="/cedar-fielder/field/field.php/?id=<?= $field['id']; ?>" class="field">
+          <a href="/cedar-fielder/field/field.php?id=<?= $field['id']; ?>" class="field">
 
             <img src="<?= $field['image_url']; ?>" alt="Field Image" />
 
