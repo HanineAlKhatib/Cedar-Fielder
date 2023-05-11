@@ -91,8 +91,8 @@ echo '</script>';
           <a href="/cedar-fielder/field/field.php/?id=<?php echo $field->id; ?>" class="field">
             <img src="#" alt="Field Image" />
             <div class="field-info">
-              <h3><?php echo $field->name; ?></h3>
-              <p><?php echo $field->location; ?></p>
+              <h3><?php echo $field['name']; ?></h3>
+              <p><?php echo $field['address']; ?></p>
             </div>
           </a>
         <?php endforeach; ?>
