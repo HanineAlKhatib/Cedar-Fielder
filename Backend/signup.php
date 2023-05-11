@@ -54,21 +54,17 @@ if ($insertResult) {
     setcookie('dob', $dateOfBirth, time() + (86400 * 30), "/");
     setcookie('userType', $userType, time() + (86400 * 30), "/");
     header('Content-Type: application/json');
-    if($userType==1){
+    
         echo json_encode([
             'success' => true,
             'message' => 'user'
         ]);
         exit();
-    }else{
-        echo json_encode([
-            'success' => true,
-            'message' => 'owner'
-        ]);
-        exit();
+    
+        
     }
   
-} else {
+ else {
     header('Content-Type: application/json');
     echo json_encode([
         'success' => false,
