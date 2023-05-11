@@ -2,7 +2,7 @@
 require_once('./Backend/db_config.php');
 
 
-if(!isset($_COOKIE['username'])){
+if (!isset($_COOKIE['username'])) {
   echo "<script>window.location = '/cedar-fielder/login.php'</script>";
 }
 
@@ -25,8 +25,8 @@ $dob = $_COOKIE['dob'];
   <link rel="stylesheet" href="./css/header.css" />
   <link rel="stylesheet" href="./css/index.css" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  
-  
+
+
 </head>
 
 <body>
@@ -35,10 +35,11 @@ $dob = $_COOKIE['dob'];
   <nav class="nav">
     <div class="navbar-brand">Cedar Fielder</div>
     <div class="navbar-buttons">
-    
-    <div class="navbar-buttons">
-      <button class="nav-btn profile-btn" id="prf">Profile</button>
+
+      <div class="navbar-buttons">
         <button class="nav-btn profile-btn" id="home">Home</button>
+        <button class="nav-btn profile-btn" id="prf">Profile</button>
+
         <button class="nav-btn signout-btn" id="signOut">Sign out</button>
       </div>
     </div>
