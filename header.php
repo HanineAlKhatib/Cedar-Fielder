@@ -1,5 +1,5 @@
 <?php
-require_once(__DIR__ . '/Backend/db_config.php');
+require_once('./Backend/db_config.php');
 
 
 if(!isset($_COOKIE['username'])){

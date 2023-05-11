@@ -1,5 +1,5 @@
 <?php
-require_once('../header/header.php');
+require_once('./header.php');
 
 $search = $_GET['search']; // Assuming you're retrieving the search query from the GET parameter
 

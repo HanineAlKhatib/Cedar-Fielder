@@ -1,5 +1,5 @@
 <?php
-require_once('header/header.php');
+require_once('header.php');
 
 $latestFields = $table->findSql("Select * from fields order by created_at desc");
 $mostRentedFields = $table->findSql("
