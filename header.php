@@ -10,6 +10,7 @@ $username = $_COOKIE['username'];
 $user_id = $_COOKIE['user_id'];
 $name = $_COOKIE['name'];
 $dob = $_COOKIE['dob'];
+$phoneNumber = $_COOKIE['phone_number'];
 ?>
 
 
