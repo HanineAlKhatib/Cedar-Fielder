@@ -14,7 +14,7 @@ $searchedFields = $table->findSql($query);
             <input type="text" id="search-input" name="search" placeholder="Search by field name or location" />
             <button type="submit">Search</button>
         </form>
-        <h1>Browse</h1>
+        <h1 id="title">Browse for </h1>
         <section id="lately-posted">
             <div class="field-list" id="lately-posted-fields">
                 <!-- Results will be populated dynamically by AJAX -->

@@ -2,7 +2,7 @@ $(document).ready(function() {
     const searchForm = document.getElementById('search-form');
     const searchInput = document.getElementById('search-input');
     const fieldList = document.getElementById('lately-posted-fields');
-
+    const browseTitle = document.getElementById('title');
     searchForm.addEventListener('submit', function(event) {
         event.preventDefault(); // Prevent form submission
 
@@ -18,6 +18,8 @@ $(document).ready(function() {
                 },
                 success: function(response) {
                     fieldList.innerHTML = response;
+                    browseTitle.textContent = 'Browse for "' + searchValue + '"';
+                
                 },
                 error: function(jqXHR, textStatus, errorThrown) {
                     console.error('Error:', textStatus, errorThrown);
