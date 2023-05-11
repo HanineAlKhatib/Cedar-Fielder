@@ -11,45 +11,18 @@
 
   <link rel="stylesheet" href="./css/profile.css" />
 </head>
-<?php require_once('header.php') ?>
+<?php require_once('header.php') 
+
+
+?>
 
 <body>
-  <!--NAVBAR-->
-  <div id="navbar-placeholder"></div>
-  <script>
-    (function() {
-      const xhttp = new XMLHttpRequest();
-      xhttp.onreadystatechange = function() {
-        if (this.readyState === 4 && this.status === 200) {
-          document.getElementById("navbar-placeholder").innerHTML =
-            this.responseText;
-        }
-      };
-      xhttp.open("GET", "../header/header.html", true);
-      xhttp.send();
-    })();
-  </script>
-  <!--END NAVBAR-->
+ 
   <main class="container mt-5">
     <section id="user-profile" class="row">
-      <!--<div id="profile-picture-container" class="col-md-4 text-center">
-          <img
-            id="profile-picture"
-            alt="Profile picture"
-            class="img-thumbnail"
-          />
-          <label for="upload-profile-picture" id="upload-label"
-            >Change Picture</label
-          >
-          <input
-            type="file"
-            id="upload-profile-picture"
-            style="display: none"
-          />
-        </div>-->
       <div id="user-info" class="col-md-8">
-        <h2 id="username">Username</h2>
-        <p id="phone-number">phone-number</p>
+        <h2 id="username"><?=$username?></h2>
+        <p id="phone-number">?=$phoneNumber?></p>
         <button id="edit-credentials" class="btn btn-primary">
           <i class="fas fa-edit"></i> Edit Credentials
         </button>
@@ -67,6 +40,35 @@
       <div class="field-list" id="rented-fields"></div>
     </section>
   </main>
+
+  <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="editModalLabel">Edit Credentials</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="edit-form">
+          <div class="form-group">
+            <label for="edit-username">Username:</label>
+            <input type="text" class="form-control" id="edit-username" name="edit-username" value="<?=$username?>" required />
+          </div>
+          <div class="form-group">
+            <label for="edit-phone-number">Phone Number:</label>
+            <input type="tel" class="form-control" id="edit-phone-number" name="edit-phone-number" value="<?=$phoneNumber?>" required />
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-primary">Save Changes</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
   <footer class="text-center py-3">
     <p>&copy; 2023 Sports Field Rentals. All rights reserved.</p>
   </footer>

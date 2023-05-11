@@ -25,6 +25,7 @@ if(empty($user)){
 
 if (password_verify($password, $user[0]['password'])) {
     setcookie('username', $username, time() + (86400 * 30), "/");
+    setcookie('name', $name, time() + (86400 * 30), "/");
     setcookie('user_id', $user[0]['id'], time() + (86400 * 30), "/");
     setcookie('phone_number', $user[0]['phone_number'], time() + (86400 * 30), "/");
     setcookie('dob', $user[0]['date_of_birth'], time() + (86400 * 30), "/");
