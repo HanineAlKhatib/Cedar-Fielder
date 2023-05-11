@@ -16,7 +16,6 @@
 
 ?>
 
-<body>
  
   <main class="container mt-5">
     <section id="user-profile" class="row">
@@ -40,35 +39,7 @@
       <div class="field-list" id="rented-fields"></div>
     </section>
   </main>
-
-  <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="editModalLabel">Edit Credentials</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <form id="edit-form">
-          <div class="form-group">
-            <label for="edit-username">Username:</label>
-            <input type="text" class="form-control" id="edit-username" name="edit-username" value="<?=$username?>" required />
-          </div>
-          <div class="form-group">
-            <label for="edit-phone-number">Phone Number:</label>
-            <input type="tel" class="form-control" id="edit-phone-number" name="edit-phone-number" value="<?=$phoneNumber?>" required />
-          </div>
-          <div class="modal-footer">
-            <button type="submit" class="btn btn-primary">Save Changes</button>
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
+  
   <footer class="text-center py-3">
     <p>&copy; 2023 Sports Field Rentals. All rights reserved.</p>
   </footer>

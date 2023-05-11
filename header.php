@@ -47,6 +47,6 @@ $phoneNumber = $_COOKIE['phone_number'];
   </nav>
 
   <script src="./js/header.js"></script>
-</body>
+
 
 </html>
