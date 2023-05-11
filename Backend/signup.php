@@ -18,6 +18,10 @@ if (isset($_POST['phoneNumber'])) {
     $phoneNumber = $_POST['phoneNumber'];
 }
 
+if (isset($_POST['userType'])) {
+    $userType = $_POST['userType'];
+}
+
 // Check if username already exists in database
 $fetchUsername = $table->findSql("SELECT username FROM users WHERE username = ?", [$username]);
 if (!empty($fetchUsername)) {
@@ -37,7 +41,8 @@ $insertResult = $table->insert('users', [
     'password' => $hashedPassword,
     'username' => $username,
     'date_of_birth' => $dateOfBirth,
-    'phone_number' => $phoneNumber
+    'phone_number' => $phoneNumber,
+    'user_type' => $userType
 ]);
 
 if ($insertResult) {
@@ -47,12 +52,22 @@ if ($insertResult) {
     setcookie('user_id',$pdo->lastInsertId(), time() + (86400 * 30), "/");
     setcookie('phone_number', $phoneNumber, time() + (86400 * 30), "/");
     setcookie('dob', $dateOfBirth, time() + (86400 * 30), "/");
+    setcookie('userType', $userType, time() + (86400 * 30), "/");
     header('Content-Type: application/json');
-    echo json_encode([
-        'success' => true,
-        'message' => 'User successfully created.'
-    ]);
-    exit();
+    if($userType==1){
+        echo json_encode([
+            'success' => true,
+            'message' => 'user'
+        ]);
+        exit();
+    }else{
+        echo json_encode([
+            'success' => true,
+            'message' => 'owner'
+        ]);
+        exit();
+    }
+  
 } else {
     header('Content-Type: application/json');
     echo json_encode([

@@ -56,7 +56,7 @@ require_once('../Slider/slider.php')
 
             <div class="form-group text-center">
               <label for="user-type">Select User Type:</label>
-              <select id="user-type" class="form-control">
+              <select id="userType" class="form-control">
                 <option value="owner">Owner</option>
                 <option value="user">User</option>
               </select>
