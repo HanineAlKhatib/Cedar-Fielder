@@ -88,16 +88,7 @@
               </select>
             </div>
           </div>
-          <div class="col-md-6">
-            <div class="mb-3">
-              <label for="status" class="form-label">Status:</label>
-              <select class="form-select" id="status" name="status" required>
-                <option value="available">Available</option>
-                <option value="rented">Rented</option>
-              </select>
-            </div>
-          </div>
-        </div>
+          
         <div class="mb-3">
           <label for="description" class="form-label">Description:</label>
           <textarea
@@ -119,16 +110,7 @@
             required
           />
         </div>
-        <div class="mb-3">
-          <label for="calendar" class="form-label">Calendar:</label>
-          <input
-            type="date"
-            class="form-control"
-            id="calendar"
-            name="calendar"
-            required
-          />
-        </div>
+        
         <div class="row">
           <div class="col-md-6">
             <div class="mb-3">
