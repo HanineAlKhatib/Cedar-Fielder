@@ -57,7 +57,7 @@
         </div>-->
         <div id="user-info" class="col-md-8">
           <h2 id="username">Username</h2>
-          <p id="email">user@example.com</p>
+          <p id="phone-number">phone-number</p>
           <button id="edit-credentials" class="btn btn-primary">
             <i class="fas fa-edit"></i> Edit Credentials
           </button>
