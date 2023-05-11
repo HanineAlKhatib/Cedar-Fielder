@@ -80,10 +80,11 @@ echo '</script>';
 
   <!--MAIN-->
   <main>
-    <form id="search-form" action="browse.php" method="GET">
+    <form id="search-form" action="./browse.php" method="GET">
       <input type="text" id="search-input" name="search" placeholder="Search by field name or location" />
       <button type="submit">Search</button>
     </form>
+
     <h1>Welcome to Sports Field Rentals!</h1>
     <section id="lately-posted">
       <h3>Lately Posted Fields</h3>
@@ -111,17 +112,17 @@ echo '</script>';
       <div class="field-list" id="most-rented-fields">
         <?php foreach ($mostRentedFields as $field) : ?>
           <div>
-          <a href="/cedar-fielder/field/field.php?id=<?= $field['id']; ?>" class="field">
+            <a href="/cedar-fielder/field/field.php?id=<?= $field['id']; ?>" class="field">
 
-            <img src="<?= $field['image_url']; ?>" alt="Field Image" />
+              <img src="<?= $field['image_url']; ?>" alt="Field Image" />
 
 
-            <div class="field-info">
-              <h3><?= $field['name']; ?></h3>
-              <p><?= $field['address']; ?></p>
+              <div class="field-info">
+                <h3><?= $field['name']; ?></h3>
+                <p><?= $field['address']; ?></p>
 
-            </div>
-          </a>
+              </div>
+            </a>
           </div>
         <?php endforeach; ?>
       </div>
