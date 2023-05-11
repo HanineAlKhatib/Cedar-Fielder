@@ -8,3 +8,26 @@ $searchedFields = $table->findSql($query);
 
 require_once('slider.php')
 ?>
+
+
+<h1>Welcome to Sports Field Rentals!</h1>
+    <section id="lately-posted">
+      <h3>Browse</h3>
+      <div class="field-list" id="lately-posted-fields">
+        <?php foreach ($searchedFields as $field) : ?>
+
+          <div>
+            <a href="field.php?id=<?= $field['id']; ?>" class="field">
+
+              <img src="<?= $field['image_url']; ?>" alt="Field Image" />
+
+              <div class="field-info">
+                <h3><?= $field['name']; ?></h3>
+                <p><?= $field['address']; ?></p>
+              </div>
+            </a>
+          </div>
+
+        <?php endforeach; ?>
+      </div>
+    </section>
