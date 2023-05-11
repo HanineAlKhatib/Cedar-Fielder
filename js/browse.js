@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+$(document).ready(function() {
     const searchForm = document.getElementById('search-form');
     const searchInput = document.getElementById('search-input');
     const fieldList = document.getElementById('lately-posted-fields');
@@ -10,22 +10,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (searchValue !== '') {
             // Perform AJAX request to fetch search results
-            const xhr = new XMLHttpRequest();
-            xhr.open('GET', './search.php?search=' + encodeURIComponent(searchValue), true);
-
-            xhr.onreadystatechange = function() {
-                if (xhr.readyState === XMLHttpRequest.DONE) {
-                    if (xhr.status === 200) {
-                        // Request successful, update field list with new search results
-                        fieldList.innerHTML = xhr.responseText;
-                    } else {
-                        // Request failed, handle error
-                        console.error('Error:', xhr.status);
-                    }
+            $.ajax({
+                type: 'GET',
+                url: '/cedar-fielder/Backend/search.php',
+                data: {
+                    search: searchValue
+                },
+                success: function(response) {
+                    fieldList.innerHTML = response;
+                },
+                error: function(jqXHR, textStatus, errorThrown) {
+                    console.error('Error:', textStatus, errorThrown);
+                    alert('An error occurred while processing your request. Please try again.');
                 }
-            };
-
-            xhr.send();
+            });
         }
     });
 });

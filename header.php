@@ -3,7 +3,7 @@ require_once('./Backend/db_config.php');
 
 
 if(!isset($_COOKIE['username'])){
-  echo "<script>window.location = '/cedar-fielder/login/login.php'</script>";
+  echo "<script>window.location = '/cedar-fielder/login.php'</script>";
 }
 
 $username = $_COOKIE['username'];
