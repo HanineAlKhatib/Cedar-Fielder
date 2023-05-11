@@ -22,7 +22,7 @@
     <section id="user-profile" class="row">
       <div id="user-info" class="col-md-8">
         <h2 id="username"><?=$username?></h2>
-        <p id="phone-number">?=$phoneNumber?></p>
+        <p id="phone-number"><?=$phoneNumber?></p>
         <button id="edit-credentials" class="btn btn-primary">
           <i class="fas fa-edit"></i> Edit Credentials
         </button>
