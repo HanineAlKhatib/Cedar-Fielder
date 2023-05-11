@@ -30,7 +30,7 @@ echo '</script>';
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
   <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
 
-  <link rel="stylesheet" href="homepage.css" />
+  <link rel="stylesheet" href="índex.css" />
   <title>Welcome To Cedar Fielder</title>
 </head>
 
@@ -80,7 +80,7 @@ echo '</script>';
 
   <!--MAIN-->
   <main>
-    <form id="search-form" action="./browse.php" method="GET">
+    <form id="search-form" action="./browse/browse.php" method="GET">
       <input type="text" id="search-input" name="search" placeholder="Search by field name or location" />
       <button type="submit">Search</button>
     </form>
@@ -133,8 +133,8 @@ echo '</script>';
     <p>&copy; 2023 Sports Field Rentals. All rights reserved.</p>
   </footer>
   <!--SCRIPT-->
-  <script src="homepage.js"></script>
-  <script src="browse.js"></script>
+  <script src="index.js"></script>
+ 
 </body>
 
 </html>

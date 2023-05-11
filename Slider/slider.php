@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="../Slider/slider.css" />
+
 <link rel="style" href="
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -95,3 +95,96 @@
 
 
 </script>
+
+<style>
+  .slider-container {
+    position: relative;
+    overflow: hidden;
+    height: 500px;
+  }
+  
+  .slider-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .slider-item.active {
+    opacity: 1;
+  }
+  
+  .slider-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .slider-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    z-index: 1;
+  }
+  
+  .slider-text h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+  
+  .slider-text p {
+    font-size: 1.5rem;
+  }
+  
+  .slider-nav {
+    position: absolute;
+    bottom: 10%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+  }
+  
+  .slider-nav-item {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    background-color: transparent;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .slider-nav-item.active,
+  .slider-nav-item:hover {
+    background-color: #fff;
+  }
+  
+  @media (max-width: 768px) {
+    .slider-container {
+      height: 300px;
+    }
+  
+    .slider-item img {
+      height: 100%;
+    }
+  
+    .slider-text h2 {
+      font-size: 2rem;
+    }
+  
+    .slider-text p {
+      font-size: 1.2rem;
+    }
+  }
+  
+</style>
