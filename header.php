@@ -36,15 +36,10 @@ $dob = $_COOKIE['dob'];
     <div class="navbar-brand">Cedar Fielder</div>
     <div class="navbar-buttons">
     
-      <div class="dropdown">
-        <button class="dropbtn">
-        <img src="https://via.placeholder.com/40x40.png?text=Profile" alt="Profile" class="profile-logo">
-
-        </button>
-        <div class="dropdown-content"> 
-          <a href="profile.php">My Profile</a>
-          <a href="login.php">Sign Out</a>
-        </div>
+    <div class="navbar-buttons">
+      <button class="nav-btn profile-btn" id="prf">Profile</button>
+        <button class="nav-btn profile-btn" id="home">Home</button>
+        <button class="nav-btn signout-btn" id="signOut">Sign out</button>
       </div>
     </div>
   </nav>
