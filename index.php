@@ -8,12 +8,11 @@ $mostRentedFields = $table->findSql("
     LEFT JOIN rent_fields AS r ON f.id = r.field_id
     GROUP BY f.id
 ");
-$latestFieldsJSON = json_encode($latestFields);
-$mostRentedFieldsJSON = json_encode($mostRentedFields);
+
 
 echo '<script>';
-echo "const latestFields = $latestFieldsJSON;";
-echo "const mostRentedFields = $mostRentedFieldsJSON;";
+echo "const latestFields = $latestFields;";
+echo "const mostRentedFields = $mostRentedFields;";
 echo '</script>';
 ?>
 
