@@ -1,5 +1,5 @@
 <?php
-require_once('db_config');
+require_once('db_config.php');
 
 $search = $_GET['search']; // Assuming you're retrieving the search query from the GET parameter
 
