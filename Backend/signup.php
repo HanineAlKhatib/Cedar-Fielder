@@ -18,9 +18,6 @@ if (isset($_POST['phoneNumber'])) {
     $phoneNumber = $_POST['phoneNumber'];
 }
 
-if (isset($_POST['userType'])) {
-    $userType = $_POST['userType'];
-}
 
 // Check if username already exists in database
 $fetchUsername = $table->findSql("SELECT username FROM users WHERE username = ?", [$username]);
@@ -42,7 +39,7 @@ $insertResult = $table->insert('users', [
     'username' => $username,
     'date_of_birth' => $dateOfBirth,
     'phone_number' => $phoneNumber,
-    'user_type' => $userType
+
 ]);
 
 if ($insertResult) {
