@@ -80,7 +80,7 @@ echo '</script>';
 
   <!--MAIN-->
   <main>
-    <form id="search-form" action="browse.php" method="POST">
+    <form id="search-form" action="browse.php" method="GET">
       <input type="text" id="search-input" name="search" placeholder="Search by field name or location" />
       <button type="submit">Search</button>
     </form>
