@@ -6,9 +6,10 @@ $search = $_GET['search']; // Assuming you're retrieving the search query from t
 $query = "SELECT * FROM fields WHERE name LIKE '%$search%' OR address LIKE '%$search%'";
 $searchedFields = $table->findSql($query);
 
-require_once('slider.php')
+
 ?>
 <body class="homepage">
+    <?php require_once('slider.php')?>
 <main>
 <h1>Welcome to Sports Field Rentals!</h1>
     <section id="lately-posted">

@@ -35,13 +35,6 @@ echo '</script>';
 </head>
 
 <body class="homepage">
-  <!--NAVBAR-->
-  <div id="navbar-placeholder">
-
-  </div>
-
-
-  <!--END OF NAVBAR-->
   <!--SLIDER-->
   <div class="slider-container">
     <div class="slider-item active">
