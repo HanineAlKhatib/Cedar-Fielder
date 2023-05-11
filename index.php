@@ -30,7 +30,7 @@ echo '</script>';
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
   <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
 
-  <link rel="stylesheet" href="índex.css" />
+  <link rel="stylesheet" href="index.css" />
   <title>Welcome To Cedar Fielder</title>
 </head>
 
