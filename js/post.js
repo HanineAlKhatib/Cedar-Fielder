@@ -10,9 +10,7 @@ form.addEventListener("submit", (event) => {
   const location = document.getElementById("location").value;
   const description = document.getElementById("description").value;
   const indoorOutdoor = document.getElementById("indoor-outdoor").value;
-  const status = document.getElementById("status").value;
   const availability = document.getElementById("availability").value;
-  const calendar = document.getElementById("calendar").value;
   const image = document.getElementById("image").value;
   const price = document.getElementById("price").value;
   const rentPeriod = document.getElementById("rent-period").value;
@@ -25,9 +23,7 @@ form.addEventListener("submit", (event) => {
     !location ||
     !description ||
     !indoorOutdoor ||
-    !status ||
     !availability ||
-    !calendar ||
     !image ||
     !price ||
     !rentPeriod
