@@ -13,14 +13,14 @@
     />
 <div class="slider-container">
     <div class="slider-item active">
-        <img src="../images/field.jfif" alt="Slider Image 1" />
+        <img src="./images/field.jfif" alt="Slider Image 1" />
         <div class="slider-text">
             <h2>Rent a Sports Field</h2>
             <p>Book your favorite sports field with ease and convenience.</p>
         </div>
     </div>
     <div class="slider-item">
-        <img src="../images/field.jfif" alt="Slider Image 2" />
+        <img src="./images/field.jfif" alt="Slider Image 2" />
         <div class="slider-text">
             <h2>Post a Field to Sell or Rent</h2>
             <p>
@@ -29,7 +29,7 @@
         </div>
     </div>
     <div class="slider-item">
-        <img src="../images/field.jfif" alt="Slider Image 3" />
+        <img src="./images/field.jfif" alt="Slider Image 3" />
         <div class="slider-text">
             <h2>Manage Your Postings as You Wish</h2>
             <p>

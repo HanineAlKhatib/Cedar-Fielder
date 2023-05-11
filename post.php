@@ -12,27 +12,16 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="post.css" />
-    <link rel="stylesheet" href="../header/header.css" />
+    <link rel="stylesheet" href="./css/post.css" />
+
 
     <title>Post A Field</title>
   </head>
+  <?php  require_once('header.php')?>
   <body>
     <!-- NAVBAR -->
     <div id="navbar-placeholder"></div>
-    <script>
-      (function () {
-        const xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function () {
-          if (this.readyState === 4 && this.status === 200) {
-            document.getElementById("navbar-placeholder").innerHTML =
-              this.responseText;
-          }
-        };
-        xhttp.open("GET", "../header/header.html", true);
-        xhttp.send();
-      })();
-    </script>
+
     <div class="container mt-5">
       <h1 class="text-center mb-4">Post a Field</h1>
       <form id="post-field-form" enctype="multipart/form-data">
@@ -190,7 +179,7 @@
     <footer class="text-center mt-5">
       <p>&copy; 2023 Sports Field Rentals. All rights reserved.</p>
     </footer>
-    <script src="post.js"></script>
-    <script src="../header/header.js"></script>
+    <script src="./js/post.js"></script>
+
   </body>
 </html>

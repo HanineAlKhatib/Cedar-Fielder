@@ -30,7 +30,7 @@ echo '</script>';
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
   <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
 
-  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="./css/index.css" />
   <title>Welcome To Cedar Fielder</title>
 </head>
 
@@ -80,7 +80,7 @@ echo '</script>';
 
   <!--MAIN-->
   <main>
-    <form id="search-form" action="./browse/browse.php" method="POST">
+    <form id="search-form" action="browse.php" method="POST">
       <input type="text" id="search-input" name="search" placeholder="Search by field name or location" />
       <button type="submit">Search</button>
     </form>
@@ -92,7 +92,7 @@ echo '</script>';
         <?php foreach ($latestFields as $field) : ?>
 
           <div>
-            <a href="/cedar-fielder/field/field.php?id=<?= $field['id']; ?>" class="field">
+            <a href="field.php?id=<?= $field['id']; ?>" class="field">
 
               <img src="<?= $field['image_url']; ?>" alt="Field Image" />
 
@@ -112,7 +112,7 @@ echo '</script>';
       <div class="field-list" id="most-rented-fields">
         <?php foreach ($mostRentedFields as $field) : ?>
           <div>
-            <a href="/cedar-fielder/field/field.php?id=<?= $field['id']; ?>" class="field">
+            <a href="field.php?id=<?= $field['id']; ?>" class="field">
 
               <img src="<?= $field['image_url']; ?>" alt="Field Image" />
 
@@ -133,7 +133,7 @@ echo '</script>';
     <p>&copy; 2023 Sports Field Rentals. All rights reserved.</p>
   </footer>
   <!--SCRIPT-->
-  <script src="index.js"></script>
+  <script src="./js/index.js"></script>
  
 </body>
 

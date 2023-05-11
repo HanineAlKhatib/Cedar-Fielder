@@ -22,7 +22,7 @@ $dob = $_COOKIE['dob'];
   <title>Cedar Fielder</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
   <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="./header/header.css" />
+  <link rel="stylesheet" href="./css/header.css" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   
 </head>
@@ -40,14 +40,14 @@ $dob = $_COOKIE['dob'];
 
         </button>
         <div class="dropdown-content"> 
-          <a href="../profile/profile.php">My Profile</a>
-          <a href="./login/login.php">Sign Out</a>
+          <a href="profile.php">My Profile</a>
+          <a href="login.php">Sign Out</a>
         </div>
       </div>
     </div>
   </nav>
 
-  <script src="./header/header.js"></script>
+  <script src="./js/header.js"></script>
 </body>
 
 </html>

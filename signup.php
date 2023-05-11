@@ -7,12 +7,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
   <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="signup.css" />
+  <link rel="stylesheet" href="./css/signup.css" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <title>Sign Up</title>
 </head>
 <?php
-require_once('../Slider/slider.php')
+require_once('slider.php')
 
 ?>
 
@@ -73,7 +73,7 @@ require_once('../Slider/slider.php')
     <p>&copy; 2023 Sports Field Rentals. All rights reserved.</p>
   </footer>
   <!--SCRIPT-->
-  <script src="signup.js"></script>
+  <script src="./js/signup.js"></script>
 
 </body>
 

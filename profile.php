@@ -17,9 +17,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
-    <link rel="stylesheet" href="../header/header.css" />
-    <link rel="stylesheet" href="profile.css" />
+
+    <link rel="stylesheet" href="./css/profile.css" />
   </head>
+  <?php require_once('header.php')?>
   <body>
     <!--NAVBAR-->
     <div id="navbar-placeholder"></div>
@@ -82,7 +83,7 @@
       <p>&copy; 2023 Sports Field Rentals. All rights reserved.</p>
     </footer>
     <!--SCRIPT-->
-    <script src="profile.js"></script>
-    <script src="../header/header.js"></script>
+    <script src="./js/profile.js"></script>
+ 
   </body>
 </html>

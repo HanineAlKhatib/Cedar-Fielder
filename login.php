@@ -16,8 +16,8 @@ setcookie('dob', '', time() - 3600, "/");
   <title>Login - Cedar Fielder</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
   <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="../header/header.css" />
-  <link rel="stylesheet" href="login.css" />
+
+  <link rel="stylesheet" href="./css/login.css" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
 </head>
@@ -57,9 +57,8 @@ setcookie('dob', '', time() - 3600, "/");
     <p>&copy; 2023 Sports Field Rentals. All rights reserved.</p>
   </footer>
   <!-- SCRIPT -->
-  <script src="../header/header.js"></script>
 
-  <script src="login.js"></script>
+  <script src="./js/login.js"></script>
 </body>
 
 </html>

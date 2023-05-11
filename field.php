@@ -13,27 +13,15 @@
       type="text/css"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     />
-    <link rel="stylesheet" href="../header/header.css" />
-    <link rel="stylesheet" href="field.css" />
+
+    <link rel="stylesheet" href="./css/field.css" />
 
     <title>Field Detail</title>
   </head>
   <body>
     <!-- NAVBAR -->
     <div id="navbar-placeholder"></div>
-    <script>
-      (function () {
-        const xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function () {
-          if (this.readyState === 4 && this.status === 200) {
-            document.getElementById("navbar-placeholder").innerHTML =
-              this.responseText;
-          }
-        };
-        xhttp.open("GET", "../header/header.html", true);
-        xhttp.send();
-      })();
-    </script>
+
 
     <!-- FIELD DESCRIPTION -->
 
@@ -114,7 +102,7 @@
     </footer>
 
     <!-- SCRIPT -->
-    <script src="../header/header.js"></script>
-    <script src="field.js"></script>
+    
+    <script src="./js/field.js"></script>
   </body>
 </html>
