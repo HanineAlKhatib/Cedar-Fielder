@@ -8,7 +8,7 @@ $searchedFields = $table->findSql($query);
 
 require_once('slider.php')
 ?>
-
+<body class="homepage">
 <main>
 <h1>Welcome to Sports Field Rentals!</h1>
     <section id="lately-posted">
@@ -32,3 +32,4 @@ require_once('slider.php')
       </div>
     </section>
 </main>
+</body>
