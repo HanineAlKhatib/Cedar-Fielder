@@ -88,15 +88,19 @@ echo '</script>';
       <h3>Lately Posted Fields</h3>
       <div class="field-list" id="lately-posted-fields">
         <?php foreach ($latestFields as $field) : ?>
-          <a href="/cedar-fielder/field/field.php/?id=<?=$field['id']; ?>" class="field">
+
           <div>
-          <img src="<?=$field['image_url']; ?>" alt="Field Image" />
+            <a href="/cedar-fielder/field/field.php/?id=<?= $field['id']; ?>" class="field">
+
+              <img src="<?= $field['image_url']; ?>" alt="Field Image" />
+
+              <div class="field-info">
+                <h3><?= $field['name']; ?></h3>
+                <p><?= $field['address']; ?></p>
+              </div>
+            </a>
           </div>
-            <div class="field-info">
-              <h3><?=$field['name']; ?></h3>
-              <p><?=$field['address']; ?></p>
-            </div>
-          </a>
+
         <?php endforeach; ?>
       </div>
     </section>
@@ -105,17 +109,19 @@ echo '</script>';
       <h3>Most Rented Fields</h3>
       <div class="field-list" id="most-rented-fields">
         <?php foreach ($mostRentedFields as $field) : ?>
-          <a href="/cedar-fielder/field/field.php/?id=<?=$field['id']; ?>" class="field">
           <div>
-          <img src="<?=$field['image_url']; ?>" alt="Field Image" />
-          </div>
-        
+          <a href="/cedar-fielder/field/field.php/?id=<?= $field['id']; ?>" class="field">
+
+            <img src="<?= $field['image_url']; ?>" alt="Field Image" />
+
+
             <div class="field-info">
-              <h3><?=$field['name']; ?></h3>
-              <p><?=$field['address']; ?></p>
+              <h3><?= $field['name']; ?></h3>
+              <p><?= $field['address']; ?></p>
 
             </div>
           </a>
+          </div>
         <?php endforeach; ?>
       </div>
     </section>
