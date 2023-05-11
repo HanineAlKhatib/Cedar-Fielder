@@ -46,7 +46,7 @@ setcookie('dob', '', time() - 3600, "/");
           <div class="form-group">
             <p>
               Don't have an account?
-              <a class="text-link" href="../signup/signup.php">Sign up</a>
+              <a class="text-link" href="./signup.php">Sign up</a>
             </p>
           </div>
         </form>
