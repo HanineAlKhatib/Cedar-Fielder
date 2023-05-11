@@ -89,7 +89,7 @@ echo '</script>';
       <div class="field-list" id="lately-posted-fields">
         <?php foreach ($latestFields as $field) : ?>
           <a href="/cedar-fielder/field/field.php/?id=<? echo $field['id']; ?>" class="field">
-            <img src="<? echo $field['image_url']; ?>" alt="Field Image" />
+            <img src="<?php echo $field['image_url']; ?>" alt="Field Image" />
             <div class="field-info">
               <h3><?php echo $field['name']; ?></h3>
               <p><?php echo $field['address']; ?></p>
@@ -104,7 +104,7 @@ echo '</script>';
       <div class="field-list" id="most-rented-fields">
         <?php foreach ($mostRentedFields as $field) : ?>
           <a href="/cedar-fielder/field/field.php/?id=<?php echo $field['id']; ?>" class="field">
-            <img src="<? echo $field['image_url']; ?>" alt="Field Image" />
+            <img src="<?php echo $field['image_url']; ?>" alt="Field Image" />
             <div class="field-info">
               <h3><?php echo $field['name']; ?></h3>
               <p><?php echo $field['address']; ?></p>
