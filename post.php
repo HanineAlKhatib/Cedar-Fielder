@@ -82,40 +82,42 @@
         </div>
 
       </div>
-  </div>
-  <div class="row">
-    <div class="col-md-6">
-      <div class="mb-3">
-        <label for="pricePerHours" class="form-label">Price per Hour $:</label>
-        <input type="number" class="form-control" id="pricePerHours" name="pricePerHours" min="0" step="0.01" required />
-      </div>
 
-    </div>
-    <div class="col-md-6">
-      <div class="mb-3">
-        <label for="minRentHours" class="form-label">Minimum Rent Hours:</label>
-        <input type="number" class="form-control" id="minRentHours" name="minRentHours" min="0" required />
+      <div class="row">
+        <div class="col-md-6">
+          <div class="mb-3">
+            <label for="pricePerHours" class="form-label">Price per Hour $:</label>
+            <input type="number" class="form-control" id="pricePerHours" name="pricePerHours" min="0" step="0.01" required />
+          </div>
+
+        </div>
+        <div class="col-md-6">
+          <div class="mb-3">
+            <label for="minRentHours" class="form-label">Minimum Rent Hours:</label>
+            <input type="number" class="form-control" id="minRentHours" name="minRentHours" min="0" required />
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-6">
-      <div class="mb-3">
-        <label for="image" class="form-label">Image:</label>
-        <input class="form-control" type="file" id="image" name="image" accept="image/*" required />
+      <div class="row">
+        <div class="col-md-6">
+          <div class="mb-3">
+            <label for="image" class="form-label">Image:</label>
+            <input class="form-control" type="file" id="image" name="image" accept="image/*" required />
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div id="image-preview-container">
+            <img id="image-preview" src="#" alt="Image Preview" style="display: none;">
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="col-md-6">
-      <div id="image-preview-container">
-        <img id="image-preview" src="#" alt="Image Preview" style="display: none;">
+      <div class="text-center">
+        <button type="submit" class="btn btn-primary btn-lg">Submit</button>
       </div>
-    </div>
+    </form>
   </div>
-  <div class="text-center">
-    <button type="submit" class="btn btn-primary btn-lg">Submit</button>
   </div>
-  </form>
-  </div>
+
 
   <script src="./js/post.js"></script>
   <footer class="text-center py-3">
