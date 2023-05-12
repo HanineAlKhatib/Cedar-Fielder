@@ -39,7 +39,7 @@ $myRentedFields = $table->findSql("SELECT fields.*, rent_fields.created_at  FROM
     <div class="field-list" id="most-rented-fields">
       <?php foreach ($mypostedField as $field) : ?>
         <div>
-          <a href="field.php?id=<?= $field['id']; ?>" class="field">
+          <a href="field.php?id=<?= $field['id']; ?>" class="field" style='color:black; text-decoration: none;'>
 
             <img src="<?= $field['image_url']; ?>" alt="Field Image" />
 
