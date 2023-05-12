@@ -53,8 +53,6 @@ $mypostedField = $table->findSql("SELECT * FROM fields where owner_id = '$user_i
         <?php endforeach; ?>
       </div>
 
-    <h2 class="mt-4">Saved Fields</h2>
-    <div class="field-list" id="saved-fields"></div>
     <h2 class="mt-4">Rented Fields</h2>
     <div class="field-list" id="rented-fields"></div>
   </section>

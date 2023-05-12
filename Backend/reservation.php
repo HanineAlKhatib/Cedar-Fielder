@@ -1,45 +1,46 @@
 <?php
 require_once 'db_config.php'; // Include your db_config file
 
-// Assuming you have established a database connection in your db_config file
+$rentDate = $_POST['rent-date'];
+$fieldId = $_POST['field_id'];
+$rentTime = $_POST['rent-time'];
+$minRentHours = $_POST['min-rent-hours'];
 
-// Retrieve the desired rental start and end times from user input
-$desiredStartTime = $_POST['start_time']; 
-$desiredEndTime = $_POST['end_time']; 
+// Convert the rent time to a DateTime object
+$rentDateTime = DateTime::createFromFormat('H:i', $rentTime);
 
-// Retrieve the desired rental date from user input
-$desiredDate = $_POST['rental_date']; 
-// Combine the desired date and time values into a single DateTime object
-$desiredStartDateTime = new DateTime("$desiredDate $desiredStartTime");
-$desiredEndDateTime = new DateTime("$desiredDate $desiredEndTime");
+// Add the minimum rental hours to the rent time
+$endDateTime = clone $rentDateTime;
+$endDateTime->add(new DateInterval('PT' . $minRentHours . 'H'));
 
-// Format the desired date and time strings for the SQL query
-$desiredStartTimestamp = $desiredStartDateTime->format('Y-m-d H:i:s');
-$desiredEndTimestamp = $desiredEndDateTime->format('Y-m-d H:i:s');
+// Format the end time
+$endTime = $endDateTime->format('H:i');
 
 try {
     // Create a new Table object using the PDO instance from your db_config file
+    
+    $result = $table->findSql("SELECT * FROM rent_fields WHERE 
+    (start_time <= '$rentTime' AND end_time >= '$endTime') AND
+    DATE(created_at) = '$rentDate' AND field_id = '$fieldId'");
 
-
-    // Query to check for time conflicts
-    $query = "SELECT * FROM rent_fields WHERE 
-              (start_time <= ? AND end_time >= ?) AND
-              DATE(created_at) = ?";
-
-    $params = [$desiredEndTimestamp, $desiredStartTime, $desiredDate];
-    $result = $table->findSql($query, $params);
 
     if (count($result) > 0) {
         // Time conflict found
-        echo "There is a time conflict with an existing rental.";
+
+        $response = array(
+            'success' => false,
+            'message' => 'There is a time conflict with an existing rental.'
+          );
     } else {
-        // No time conflict
-        echo "No time conflict found. You can proceed with the rental.";
+
+        $response = array(
+            'success' => true,
+            'message' => 'Booking request successful!'
+          );
     }
+
+    header('Content-Type: application/json');
+    echo json_encode($response);
 } catch (PDOException $e) {
     echo "Error: " . $e->getMessage();
 }
-
-// Close the database connection (if necessary)
-
-?>
