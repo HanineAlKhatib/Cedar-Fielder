@@ -20,8 +20,11 @@ try {
     // Create a new Table object using the PDO instance from your db_config file
     
     $result = $table->findSql("SELECT * FROM rent_fields WHERE 
-    (start_time <= '$rentTime' AND end_time >= '$endTime') AND
+    (start_time <= '$rentTime' AND end_time >= '$rentTime') OR
+    (start_time <= '$endTime' AND end_time >= '$endTime') OR
+    (start_time >= '$rentTime' AND end_time <= '$endTime') AND
     DATE(created_at) = '$rentDate' AND field_id = '$fieldId'");
+
 
     if (count($result) > 0) {
         // Time conflict found
