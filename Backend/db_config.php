@@ -3,7 +3,7 @@
 
 try {
     // Establish a database connection using PDO
-    $pdo = new PDO('mysql:host=localhost; dbname=cedar-fields_db', 'root', 'AaAa123123?');
+    $pdo = new PDO('mysql:host=localhost; dbname=cedar-fields_db', 'quiver', '123123123');
 
     // Create a new Table object using the PDO instance
     $table = new Table($pdo);
