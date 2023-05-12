@@ -16,6 +16,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $pricePerHours = $_POST['pricePerHours'];
   $image = $_FILES['image'];
 
+  $userId = $_COOKIE['user_id'];
+
   // Additional validation and processing can be done here
   
   // Save the image file
@@ -24,6 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   // Insert the field data into the database
   $data = array(
     'name' => $name,
+    'owner_id' => $userId,
     'size' => $size,
     'sport_type' => $sportTypes,
     'address' => $address,
