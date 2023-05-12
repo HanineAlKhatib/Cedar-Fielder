@@ -38,13 +38,19 @@
       </div>
       <div class="mb-3">
         <label for="sport-types" class="form-label">Sport Types:</label>
-        <select class="form-select" id="sport-types" name="sport-types[]" multiple required>
-          <option value="football">Football</option>
-          <option value="basketball">Basketball</option>
-          <option value="tennis">Tennis</option>
-          <option value="volleyball">Volleyball</option>
-        </select>
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="sport-types-dropdown" data-bs-toggle="dropdown" aria-expanded="false">
+            Select Sport Types
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="sport-types-dropdown">
+            <li><input type="checkbox" id="football" name="sport-types[]" value="football"><label for="football">Football</label></li>
+            <li><input type="checkbox" id="basketball" name="sport-types[]" value="basketball"><label for="basketball">Basketball</label></li>
+            <li><input type="checkbox" id="tennis" name="sport-types[]" value="tennis"><label for="tennis">Tennis</label></li>
+            <li><input type="checkbox" id="volleyball" name="sport-types[]" value="volleyball"><label for="volleyball">Volleyball</label></li>
+          </ul>
+        </div>
       </div>
+
 
       <div class="mb-3">
         <label for="address" class="form-label">Address:</label>
