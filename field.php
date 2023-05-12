@@ -65,7 +65,7 @@ $field = $fields[0];
         </div>
       </div>
       <div class="col-md-4">
-      <form id="rent-form" class="form" data-min-rent-hours="<?= $field['min_rent_hours'] ?>" field-id="<?= $field['id'] ?>">
+      <form id="rent-form" class="form" data-min-rent-hours="<?= $field['min_rent_hours'] ?>" field-id="<?= $id ?>">
 
           <h2 class="form-title">Book this Field</h2>
           <div class="form-group">
