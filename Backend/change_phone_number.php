@@ -10,6 +10,7 @@ $result = $table->findSql($query);
 
 $response = array();
 if ($result) {
+    setcookie('phone_number', $phoneNumber, time() + (86400 * 30), '/');
   $response['success'] = true;
   $response['message'] = 'Phone number updated successfully!';
 } else {

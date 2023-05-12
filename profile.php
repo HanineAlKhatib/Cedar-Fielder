@@ -27,7 +27,7 @@
       <button id="edit-credentials" class="btn btn-primary">
         <i class="fas fa-edit"></i> Change Phone Number
       </button>
-      <button id="post-field" class="btn btn-success" onclick="window.location.href='../poster/post.html';">
+      <button id="post-field" class="btn btn-success" onclick="window.location.href='../poster/post.php';">
         <i class="fas fa-plus"></i> Post a Field
       </button>
     </div>
