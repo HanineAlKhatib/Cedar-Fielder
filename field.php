@@ -53,7 +53,7 @@ $field = $fields[0];
             <strong>Description:</strong> <?= $field['description'] ?>
           </div>
           <div class="field-detail">
-            <strong>Days Open for Rent:</strong> <?= date('h:i A', strtotime($field['open_hours'])) ?> Till <?= date('h:i A', strtotime($field['close_hours'])) ?>
+            <strong>Hours Open for Rent:</strong> <?= date('h:i A', strtotime($field['open_hours'])) ?> Till <?= date('h:i A', strtotime($field['close_hours'])) ?>
           </div>
 
           <div class="field-detail">

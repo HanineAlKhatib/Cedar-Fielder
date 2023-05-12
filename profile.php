@@ -1,3 +1,8 @@
+<?php
+require_once('header.php');
+$mypostedField = $table->findSql("SELECT * FROM fields where user_id = '$user_id'");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,10 +16,7 @@
 
   <link rel="stylesheet" href="./css/profile.css" />
 </head>
-<?php require_once('header.php')
 
-
-?>
 
 
 <main class="container mt-5">
@@ -33,7 +35,24 @@
   </section>
   <section id="user-fields" class="mt-5">
     <h2>My Posted Fields</h2>
-    <div class="field-list" id="my-posted-fields"></div>
+    <div class="field-list" id="most-rented-fields">
+        <?php foreach ($mypostedField as $field) : ?>
+          <div>
+            <a href="field.php?id=<?= $field['id']; ?>" class="field">
+
+              <img src="<?= $field['image_url']; ?>" alt="Field Image" />
+
+
+              <div class="field-info">
+                <h3><?= $field['name']; ?></h3>
+                <p><?= $field['address']; ?></p>
+
+              </div>
+            </a>
+          </div>
+        <?php endforeach; ?>
+      </div>
+
     <h2 class="mt-4">Saved Fields</h2>
     <div class="field-list" id="saved-fields"></div>
     <h2 class="mt-4">Rented Fields</h2>
