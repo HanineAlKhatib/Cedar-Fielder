@@ -105,6 +105,11 @@
             <input class="form-control" type="file" id="image" name="image" accept="image/*" required />
           </div>
         </div>
+
+      </div>
+
+      <div class="row">
+
         <div class="col-md-6">
           <div id="image-preview-container">
             <img id="image-preview" src="#" alt="Image Preview" style="display: none;">
