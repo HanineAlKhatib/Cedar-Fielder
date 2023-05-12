@@ -3,7 +3,7 @@
 require_once('header.php');
 $id = $_GET['id'];
 
-$fields = $table->findSql("Select * from fields where id = '$id'");
+$fields = $table->findSql("Select fields.*, users.phone_number from fields join users on users.id = fields.owner_id where id = '$id'");
 $field = $fields[0];
 ?>
 
@@ -39,6 +39,10 @@ $field = $fields[0];
       <div class="col-md-8">
         <h1 class="field-name"><?= $field['name'] ?></h1>
         <div class="field-details">
+
+          <div class="field-detail">
+            <strong>Phone Number:</strong> <?= $field['phone_number'] ?>
+          </div>
           <div class="field-detail">
             <strong>Size:</strong> <?= $field['size'] ?>
           </div>
@@ -65,7 +69,7 @@ $field = $fields[0];
         </div>
       </div>
       <div class="col-md-4">
-      <form id="rent-form" class="form" data-min-rent-hours="<?= $field['min_rent_hours'] ?>" field-id="<?= $id ?>">
+        <form id="rent-form" class="form" data-min-rent-hours="<?= $field['min_rent_hours'] ?>" field-id="<?= $id ?>">
 
           <h2 class="form-title">Book this Field</h2>
           <div class="form-group">
