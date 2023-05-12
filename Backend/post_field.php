@@ -29,8 +29,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     'address' => $address,
     'type' => $type,
     'description' => $description,
-    'openHours' => $openHours,
-    'closeHours' => $closeHours,
+    'open_hours' => $openHours,
+    'close_hours' => $closeHours,
     'min_rent_hours' => $minRentHours,
     'price_hour' => $pricePerHours,
     'image_url' => $imageUrl
