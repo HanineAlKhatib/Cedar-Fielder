@@ -32,7 +32,7 @@ $field = $fields[0];
   <div class="container field-description">
     <div class="row">
       <div class="col-md-12">
-        <img src="<?php echo $field['image'];?>" alt="Field Image" class="field-image" />
+        <img src="<?= $field['image_url']; ?>"  alt="Field Image" class="field-image" />
       </div>
     </div>
     <div class="row">
