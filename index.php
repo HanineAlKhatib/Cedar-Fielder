@@ -79,42 +79,58 @@ echo '</script>';
     <section id="lately-posted">
       <h3>Lately Posted Fields</h3>
       <div class="field-list" id="lately-posted-fields">
+        <?php $counter = 0; ?>
         <?php foreach ($latestFields as $field) : ?>
+          <?php if ($counter % 4 === 0) : ?>
+            <div class="row">
+            <?php endif; ?>
 
-          <div>
-            <a href="field.php?id=<?= $field['id']; ?>" class="field">
+            <div class="col-md-3">
+              <a href="field.php?id=<?= $field['id']; ?>" class="field">
+                <img src="<?= $field['image_url']; ?>" alt="Field Image" />
+                <div class="field-info">
+                  <h3><?= $field['name']; ?></h3>
+                  <p><?= $field['address']; ?></p>
+                </div>
+              </a>
+            </div>
 
-              <img src="<?= $field['image_url']; ?>" alt="Field Image" />
-
-              <div class="field-info">
-                <h3><?= $field['name']; ?></h3>
-                <p><?= $field['address']; ?></p>
-              </div>
-            </a>
-          </div>
+            <?php $counter++; ?>
+            <?php if ($counter % 4 === 0 || $counter === count($latestFields)) : ?>
+            </div>
+          <?php endif; ?>
 
         <?php endforeach; ?>
+
       </div>
     </section>
 
     <section id="most-rented">
       <h3>Most Rented Fields</h3>
       <div class="field-list" id="most-rented-fields">
+        <?php $counter = 0; ?>
         <?php foreach ($mostRentedFields as $field) : ?>
-          <div>
-            <a href="field.php?id=<?= $field['id']; ?>" class="field">
+          <?php if ($counter % 4 === 0) : ?>
+            <div class="row">
+            <?php endif; ?>
 
-              <img src="<?= $field['image_url']; ?>" alt="Field Image" />
+            <div class="col-md-3">
+              <a href="field.php?id=<?= $field['id']; ?>" class="field">
+                <img src="<?= $field['image_url']; ?>" alt="Field Image" />
+                <div class="field-info">
+                  <h3><?= $field['name']; ?></h3>
+                  <p><?= $field['address']; ?></p>
+                </div>
+              </a>
+            </div>
 
+            <?php $counter++; ?>
+            <?php if ($counter % 4 === 0 || $counter === count($mostRentedFields)) : ?>
+            </div>
+          <?php endif; ?>
 
-              <div class="field-info">
-                <h3><?= $field['name']; ?></h3>
-                <p><?= $field['address']; ?></p>
-
-              </div>
-            </a>
-          </div>
         <?php endforeach; ?>
+
       </div>
     </section>
   </main>
