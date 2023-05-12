@@ -12,7 +12,7 @@ $(document).ready(function() {
       // Append the min_rent_hours to the form data
       formData += '&min-rent-hours=' + minRentHours;
       formData += '&field_id=' + fieldId;
-      
+      console.log(fieldId);
       // Make an AJAX request
       $.ajax({
         type: 'POST',

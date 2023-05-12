@@ -22,7 +22,6 @@ try {
     $result = $table->findSql("SELECT * FROM rent_fields WHERE 
     (start_time <= '$rentTime' AND end_time >= '$endTime') AND
     DATE(created_at) = '$rentDate' AND field_id = '$fieldId'");
-    echo "<script>console.log(".$fieldId.")</script>";
 
     if (count($result) > 0) {
         // Time conflict found
