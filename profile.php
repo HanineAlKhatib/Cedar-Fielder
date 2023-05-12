@@ -17,8 +17,7 @@
 ?>
 
 
-<main class="container mt-5" style="
-    margin-top: 8rem !important;">
+<main class="container mt-5">
   <section id="user-profile" class="row">
     <div id="user-info" class="col-md-8">
       <h1 id="username"><?= $name ?></h1>
