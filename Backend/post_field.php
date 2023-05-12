@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $data = array(
     'name' => $name,
     'size' => $size,
-    'sport_types' => $sportTypes,
+    'sport_type' => $sportTypes,
     'address' => $address,
     'type' => $type,
     'description' => $description,
