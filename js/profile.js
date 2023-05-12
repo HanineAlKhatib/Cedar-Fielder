@@ -1,73 +1,38 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const profilePicture = document.getElementById("profile-picture");
-  const uploadProfilePicture = document.getElementById(
-    "upload-profile-picture"
-  );
+$(document).ready(function() {
+  const phoneNumberElement = document.getElementById('phone-number');
+  const editCredentialsButton = document.getElementById('edit-credentials');
 
-  profilePicture.addEventListener("click", function () {
-    uploadProfilePicture.click();
-  });
+  editCredentialsButton.addEventListener('click', function() {
+    const newPhoneNumber = phoneNumberElement.textContent.trim();
+    const userId = getCookie('user_id');
 
-  uploadProfilePicture.addEventListener("change", function (event) {
-    const file = event.target.files[0];
-    if (file) {
-      const reader = new FileReader();
-
-      reader.onload = function (e) {
-        profilePicture.src = e.target.result;
-      };
-      reader.readAsDataURL(file);
-    }
-  });
-
-  // Add sample data for user's posted, saved, and rented fields
-  const myPostedFields = [
-    { name: "My Field A", location: "City A" },
-    { name: "My Field B", location: "City B" },
-  ];
-
-  const savedFields = [
-    { name: "Saved Field A", location: "City A" },
-    { name: "Saved FieldB", location: "City B" },
-  ];
-
-  const rentedFields = [
-    { name: "Rented Field A", location: "City A" },
-    { name: "Rented Field B", location: "City B" },
-  ];
-
-  function createFieldElement(field) {
-    const fieldDiv = document.createElement("div");
-    fieldDiv.classList.add("field-card");
-
-    const fieldName = document.createElement("h3");
-    fieldName.textContent = field.name;
-    fieldDiv.appendChild(fieldName);
-
-    const fieldLocsation = document.createElement("p");
-    fieldLocation.textContent = field.location;
-    fieldDiv.appendChild(fieldLocation);
-
-    return fieldDiv;
-  }
-
-  function displayFields(fields, containerId) {
-    const container = document.getElementById(containerId);
-    fields.forEach((field) => {
-      const fieldDiv = createFieldElement(field);
-      container.appendChild(fieldDiv);
+    // Perform AJAX request to update the phone number
+    $.ajax({
+      type: 'POST',
+      url: '/cedar-fielder/Backend/change_phone_number.php',
+      data: {
+        userId: userId,
+        phoneNumber: newPhoneNumber
+      },
+      success: function(response) {
+        if (response.success) {
+          // Update the phone number on the page
+          phoneNumberElement.textContent = newPhoneNumber;
+          alert('Phone number updated successfully!');
+        } else {
+          alert(response.message);
+        }
+      },
+      error: function(jqXHR, textStatus, errorThrown) {
+        console.error('Error:', textStatus, errorThrown);
+        alert('An error occurred while processing your request. Please try again.');
+      }
     });
-  }
-
-  displayFields(myPostedFields, "my-posted-fields");
-  displayFields(savedFields, "saved-fields");
-  displayFields(rentedFields, "rented-fields");
-
-  // Redirect to history of rents page
-  const historyButton = document.createElement("button");
-  historyButton.textContent = "History of Rents";
-  historyButton.addEventListener("click", function () {
-    window.location.href = "history_of_rents.html"; // Replace with the correct URL
   });
-  document.getElementById("user-fields").appendChild(historyButton);
+
+  // Function to retrieve cookie value by name
+  function getCookie(name) {
+    const cookieValue = document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)');
+    return cookieValue ? cookieValue.pop() : '';
+  }
 });

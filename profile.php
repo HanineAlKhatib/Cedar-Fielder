@@ -21,10 +21,11 @@
     margin-top: 8rem !important;">
   <section id="user-profile" class="row">
     <div id="user-info" class="col-md-8">
+      <h1 id="username"><?= $name ?></h1>
       <h2 id="username"><?= $username ?></h2>
-      <p id="phone-number"><?= $phoneNumber ?></p>
+      <p id="phone-number" contenteditable><?= $phoneNumber ?></p>
       <button id="edit-credentials" class="btn btn-primary">
-        <i class="fas fa-edit"></i> Edit Credentials
+        <i class="fas fa-edit"></i> Change Phone Number
       </button>
       <button id="post-field" class="btn btn-success" onclick="window.location.href='../poster/post.html';">
         <i class="fas fa-plus"></i> Post a Field
