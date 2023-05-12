@@ -4,6 +4,7 @@ require_once('header.php');
 
 ?>
   <link rel="stylesheet" href="./css/index.css" />
+  <link rel="stylesheet" href="./css/browse.css" />
 <body class="homepage">
     <?php require_once('slider.php'); ?>
     <main>
