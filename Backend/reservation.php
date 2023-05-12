@@ -34,6 +34,7 @@ try {
     } else {
         $data = array(
             'field_id' => $fieldId,
+            'user_id' => $_COOKIE['user_id'],
             'start_time' => $rentTime,
             'end_time' => $endTime,
             'created_at' => date('Y-m-d H:i:s')
