@@ -63,7 +63,7 @@ require_once('slider.php')
 
           <div class="form-text">
             Already have an account?
-            <a class="text-link" type="submit" href="../login/login.php">Log In</a>
+            <a class="text-link" type="submit" href="login.php">Log In</a>
           </div>
         </div>
       </div>
