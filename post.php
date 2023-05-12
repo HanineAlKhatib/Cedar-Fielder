@@ -46,6 +46,12 @@
       <div class="row">
         <div class="col-md-6">
           <div class="mb-3">
+            <label for="description" class="form-label">Description:</label>
+            <textarea class="form-control" id="description" name="description" rows="4" required></textarea>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="mb-3">
             <label for="type" class="form-label">Indoor/Outdoor:</label>
             <select class="form-select" id="type" name="type" required>
               <option value="indoor">Indoor</option>
@@ -53,33 +59,30 @@
             </select>
           </div>
         </div>
-        <div class="col-md-6">
-          <div class="mb-3">
-            <label for="description" class="form-label">Description:</label>
-            <textarea class="form-control" id="description" name="description" rows="4" required></textarea>
-          </div>
-        </div>
       </div>
       <div class="row">
         <div class="col-md-6">
           <div class="mb-3">
             <label for="openHours" class="form-label">Opening Hours:</label>
-            <input type="text" class="form-control" id name="openHours" name="openHours" required />
+            <input type="time" class="form-control" id="openHours" name="openHours" required />
           </div>
+
         </div>
         <div class="col-md-6">
           <div class="mb-3">
             <label for="closeHours" class="form-label">Closing Hours:</label>
-            <input type="text" class="form-control" id="closeHours" name="closeHours" required />
+            <input type="time" class="form-control" id="closeHours" name="closeHours" required />
           </div>
+
         </div>
       </div>
       <div class="row">
         <div class="col-md-6">
           <div class="mb-3">
-            <label for="pricePerHours" class="form-label">Price per Hour:</label>
+            <label for="pricePerHours" class="form-label">Price per Hour $:</label>
             <input type="number" class="form-control" id="pricePerHours" name="pricePerHours" min="0" step="0.01" required />
           </div>
+
         </div>
         <div class="col-md-6">
           <div class="mb-3">
