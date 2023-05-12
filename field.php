@@ -92,8 +92,6 @@ $field = $fields[0];
     <p>&copy; 2023 Sports Field Rentals. All rights reserved.</p>
   </footer>
 
-  <!-- SCRIPT -->
-
   <script src="./js/field.js"></script>
 </body>
 

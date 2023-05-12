@@ -3,8 +3,10 @@ require_once('header.php');
 
 
 ?>
-  <link rel="stylesheet" href="./css/index.css" />
-  <link rel="stylesheet" href="./css/browse.css" />
+<link rel="stylesheet" href="./css/index.css" />
+<link rel="stylesheet" href="./css/browse.css" />
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
+
 <body class="homepage">
     <?php require_once('slider.php'); ?>
     <main>
