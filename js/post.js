@@ -1,3 +1,44 @@
+
+  const openHoursInput = document.getElementById("openHours");
+  const closeHoursInput = document.getElementById("closeHours");
+
+  // Add event listener to check closing hours validity
+  openHoursInput.addEventListener("input", validateClosingHours);
+
+  function validateClosingHours() {
+    const openHours = openHoursInput.value;
+    const closeHours = closeHoursInput.value;
+
+    if (closeHours < openHours) {
+      closeHoursInput.setCustomValidity("Closing hours cannot be before opening hours.");
+    } else {
+      closeHoursInput.setCustomValidity("");
+    }
+  }
+
+  const imageInput = document.getElementById("image");
+  const imagePreview = document.getElementById("image-preview");
+
+  // Add event listener to show image preview
+  imageInput.addEventListener("change", showImagePreview);
+
+  function showImagePreview() {
+    const file = imageInput.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        imagePreview.src = e.target.result;
+        imagePreview.style.display = "block";
+      };
+      reader.readAsDataURL(file);
+    } else {
+      imagePreview.src = "#";
+      imagePreview.style.display = "none";
+    }
+  }
+
+
+
 document.getElementById("post-field-form").addEventListener("submit", function(event) {
   event.preventDefault(); // Prevent the form from submitting normally
 
