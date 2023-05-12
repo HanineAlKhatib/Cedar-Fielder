@@ -4,7 +4,7 @@ $(document).ready(function() {
     const fieldList = document.getElementById('lately-posted-fields');
     const browseTitle = document.getElementById('title');
     searchForm.addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent form submission
+        event.preventDefault(); 
 
         const searchValue = searchInput.value.trim();
 
