@@ -6,7 +6,7 @@ $(document).ready(function() {
       const minRentHours = $(this).data('min-rent-hours');
       
       // Get the form data
-      const formData = $(this).serialize();
+      var formData = $(this).serialize();
       
       // Append the min_rent_hours to the form data
       formData += '&min-rent-hours=' + minRentHours;
