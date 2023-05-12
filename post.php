@@ -17,7 +17,7 @@
 
     <title>Post A Field</title>
   </head>
-  <?php  require_once('header.php')?>
+  <?php require_once('header.php') ?>
   <body>
     <!-- NAVBAR -->
     <div id="navbar-placeholder"></div>
@@ -62,25 +62,23 @@
           />
         </div>
         <div class="mb-3">
-          <label for="location" class="form-label">Address:</label>
+          <label for="address" class="form-label">Address:</label>
           <input
             type="text"
             class="form-control"
-            id="location"
-            name="location"
+            id="address"
+            name="address"
             required
           />
         </div>
         <div class="row">
           <div class="col-md-6">
             <div class="mb-3">
-              <label for="indoor-outdoor" class="form-label"
-                >Indoor/Outdoor:</label
-              >
+              <label for="type" class="form-label">Indoor/Outdoor:</label>
               <select
                 class="form-select"
-                id="indoor-outdoor"
-                name="indoor-outdoor"
+                id="type"
+                name="type"
                 required
               >
                 <option value="indoor">Indoor</option>
@@ -88,29 +86,45 @@
               </select>
             </div>
           </div>
-          
-        <div class="mb-3">
-          <label for="description" class="form-label">Description:</label>
-          <textarea
-            class="form-control"
-            id="description"
-            name="description"
-            rows="4"
-            required
-          ></textarea>
+          <div class="col-md-6">
+            <div class="mb-3">
+              <label for="description" class="form-label">Description:</label>
+              <textarea
+                class="form-control"
+                id="description"
+                name="description"
+                rows="4"
+                required
+              ></textarea>
+            </div>
+          </div>
         </div>
-        <div class="mb-3">
-          <label for="availability" class="form-label">Availability:</label>
-          <input
-            type="text"
-            class="form-control"
-            id="availability"
-            name="availability"
-            placeholder="dd/mm/yyyy - dd/mm/yyyy"
-            required
-          />
+        <div class="row">
+          <div class="col-md-6">
+            <div class="mb-3">
+              <label for="openHours" class="form-label">Opening Hours:</label>
+              <input
+                type="text"
+                class="form-control"
+                id                name="openHours"
+                name="openHours"
+                required
+              />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="mb-3">
+              <label for="closeHours" class="form-label">Closing Hours:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="closeHours"
+                name="closeHours"
+                required
+              />
+            </div>
+          </div>
         </div>
-        
         <div class="row">
           <div class="col-md-6">
             <div class="mb-3">
@@ -128,30 +142,46 @@
           </div>
           <div class="col-md-6">
             <div class="mb-3">
-              <label for="rent-period" class="form-label">Rent Period:</label>
-              <select
-                class="form-select"
-                id="rent-period"
-                name="rent-period"
+              <label for="minRentHours" class="form-label">Minimum Rent Hours:</label>
+              <input
+                type="number"
+                class="form-control"
+                id="minRentHours"
+                name="minRentHours"
+                min="0"
                 required
-              >
-                <option value="hour">Per Hour</option>
-                <option value="day">Per Day</option>
-                <option value="month">Per Month</option>
-              </select>
+              />
             </div>
           </div>
         </div>
-        <div class="mb-3">
-          <label for="image" class="form-label">Image:</label>
-          <input
-            class="form-control"
-            type="file"
-            id="image"
-            name="image"
-            accept="image/*"
-            required
-          />
+        <div class="row">
+          <div class="col-md-6">
+            <div class="mb-3">
+              <label for="pricePerHours" class="form-label">Price per Hour:</label>
+              <input
+                type="number"
+                class="form-control"
+                id="pricePerHours"
+                name="pricePerHours"
+                min="0"
+                step="0.01"
+                required
+              />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="mb-3">
+              <label for="image" class="form-label">Image:</label>
+              <input
+                class="form-control"
+                type="file"
+                id="image"
+                name="image"
+                accept="image/*"
+                required
+              />
+            </div>
+          </div>
         </div>
         <div class="text-center">
           <button type="submit" class="btn btn-primary btn-lg">Submit</button>
@@ -161,8 +191,7 @@
 
     <script src="./js/post.js"></script>
     <footer class="text-center py-3">
-  <p>&copy; 2023 Sports Field Rentals. All rights reserved.</p>
-</footer>
+      <p>&copy; 2023 Sports Field Rentals. All rights reserved.</p>
+    </footer>
   </body>
-  
 </html>

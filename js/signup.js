@@ -22,7 +22,7 @@ form.addEventListener("submit", (event) => {
   // Send form data using AJAX
   $.ajax({
     type: "POST",
-    url: "../Backend/signup.php",
+    url: "/cedar-fielder/Backend/signup.php",
     data: {
       name: name,
       username: username,
