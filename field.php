@@ -1,6 +1,6 @@
 <?php
 
-include('./Backend/db_config.php');
+require_once('header.php');
 $id = $_GET['id'];
 
 $fields = $table->findSql("Select * from fields where id = '$id'");
