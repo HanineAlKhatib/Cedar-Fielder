@@ -32,7 +32,7 @@ $field = $fields[0];
   <div class="container field-description">
     <div class="row">
       <div class="col-md-12">
-        <img src="https://via.placeholder.com/600x400" alt="Field Image" class="field-image" />
+        <img src="<?=$field['image']?>" alt="Field Image" class="field-image" />
       </div>
     </div>
     <div class="row">
@@ -42,7 +42,7 @@ $field = $fields[0];
           <div class="field-detail">
             <strong>Size:</strong> <?=$field['size']?>
           </div>
-          <div class="field-detail"><strong>Sport Type:</strong> <?=$field['sport_tyoe']?></div>
+          <div class="field-detail"><strong>Sport Type:</strong> <?=$field['sport_type']?></div>
           <div class="field-detail">
             <strong>Location:</strong> <?=$field['address']?>
           </div>
@@ -56,7 +56,7 @@ $field = $fields[0];
             <strong>Days Open for Rent:</strong> <?=$field['open_hours']?> Till <?=$field['close_hours']?>
           </div>
           <div class="field-detail">
-            <strong>Price Per Hour:</strong> <?=$field['price_hour']?>
+            <strong>Price Per Hour:</strong> <?=$field['price_hour']?> $
           </div>
           <div class="field-detail">
             <strong>Rent Period:</strong> <?=$field['min_rent_hours']?> hours minimum
