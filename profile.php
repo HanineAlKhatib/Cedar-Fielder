@@ -1,6 +1,7 @@
 <?php
 require_once('header.php');
 $mypostedField = $table->findSql("SELECT * FROM fields where owner_id = '$user_id'");
+$myRentedFields = $table->findSql("SELECT * FROM fields join rent_fields on rent_fields.field_id = fields.id   where rent_fields.user_id = '$user_id'");
 ?>
 
 <!DOCTYPE html>
@@ -54,7 +55,23 @@ $mypostedField = $table->findSql("SELECT * FROM fields where owner_id = '$user_i
       </div>
 
     <h2 class="mt-4">Rented Fields</h2>
-    <div class="field-list" id="rented-fields"></div>
+    <div class="field-list" id="most-rented-fields">
+        <?php foreach ($myRentedFields as $field) : ?>
+          <div>
+            <a href="field.php?id=<?= $field['id']; ?>" class="field">
+
+              <img src="<?= $field['image_url']; ?>" alt="Field Image" />
+
+
+              <div class="field-info">
+                <h3><?= $field['name']; ?></h3>
+                <p><?= $field['address']; ?></p>
+
+              </div>
+            </a>
+          </div>
+        <?php endforeach; ?>
+      </div>
   </section>
 </main>
 
