@@ -23,10 +23,9 @@
   <div class="slider-item">
     <img src="./images/field.jfif" alt="Slider Image 3" />
     <div class="slider-text">
-      <h2>Manage Your Postings as You Wish</h2>
+      <h2>Book Fields</h2>
       <p>
-        Keep track of your sports field postings and edit or delete them as
-        needed.
+        Look for fields on CF and book them the time you prefer.
       </p>
     </div>
   </div>
