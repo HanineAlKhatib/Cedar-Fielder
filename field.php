@@ -3,7 +3,7 @@
 require_once('header.php');
 $id = $_GET['id'];
 
-$fields = $table->findSql("Select fields.*, users.phone_number from fields join users on users.id = fields.owner_id where id = '$id'");
+$fields = $table->findSql("Select fields.*, users.phone_number from fields join users on users.id = fields.owner_id where fields.id = '$id'");
 $field = $fields[0];
 ?>
 
