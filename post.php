@@ -160,9 +160,9 @@
     </div>
 
     <script src="./js/post.js"></script>
-
+    <footer class="text-center py-3">
+  <p>&copy; 2023 Sports Field Rentals. All rights reserved.</p>
+</footer>
   </body>
-  <footer class="text-center mt-5">
-      <p>&copy; 2023 Sports Field Rentals. All rights reserved.</p>
-    </footer>
+  
 </html>
