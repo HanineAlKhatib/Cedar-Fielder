@@ -1,6 +1,6 @@
 <?php
 require_once('header.php');
-$mypostedField = $table->findSql("SELECT * FROM fields where user_id = '$user_id'");
+$mypostedField = $table->findSql("SELECT * FROM fields where owner_id = '$user_id'");
 ?>
 
 <!DOCTYPE html>
