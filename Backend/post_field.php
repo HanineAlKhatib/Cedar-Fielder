@@ -63,7 +63,7 @@ function saveImage($image) {
     $fileName = $image['name'];
     $ext = pathinfo($fileName, PATHINFO_EXTENSION);
     $newFileName = uniqid() . '.' . $ext;
-    $destination = 'uploads/' . $newFileName;
+    $destination = '/ceder-fielder/uploads/' . $newFileName;
 
     // Move the uploaded file to the destination folder
     if (move_uploaded_file($tmpName, $destination)) {
