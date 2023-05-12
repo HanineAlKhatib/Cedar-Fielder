@@ -70,6 +70,8 @@ function saveImage($image) {
 
     // Move the uploaded file to the destination folder
     if (move_uploaded_file($tmpName, $destination)) {
+
+      $destination = './uploads/' . $newFileName;
       return $destination;
     }
   }
