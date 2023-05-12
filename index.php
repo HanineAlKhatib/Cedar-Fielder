@@ -47,7 +47,7 @@ echo '</script>';
     <div class="slider-item">
       <img src="images/field.jfif" alt="Slider Image 2" />
       <div class="slider-text">
-        <h2>Post a Field to Sell or Rent</h2>
+        <h2>Post a Field to Rent Out</h2>
         <p>
           Get the word out about your sports field and start making money.
         </p>
@@ -75,7 +75,7 @@ echo '</script>';
   <main>
 
 
-    <h1>Welcome to Sports Field Rentals!</h1>
+    <h1>Welcome to Cedar Fielder!</h1>
     <section id="lately-posted">
       <h3>Lately Posted Fields</h3>
       <div class="field-list" id="lately-posted-fields">
