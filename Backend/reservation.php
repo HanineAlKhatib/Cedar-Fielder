@@ -32,11 +32,26 @@ try {
             'message' => 'There is a time conflict with an existing rental.'
           );
     } else {
+        $data = array(
+            'field_id' => $fieldId,
+            'start_time' => $rentTime,
+            'end_time' => $endTime,
+            'created_at' => date('Y-m-d H:i:s')
+        );
 
-        $response = array(
-            'success' => true,
-            'message' => 'Booking request successful!'
-          );
+        $success = $table->insert('rent_fields', $data);
+
+        if ($success) {
+            $response = array(
+                'success' => true,
+                'message' => 'Booking request successful!'
+            );
+        } else {
+            $response = array(
+                'success' => false,
+                'message' => 'Failed to create booking request.'
+            );
+        }
     }
 
     header('Content-Type: application/json');
