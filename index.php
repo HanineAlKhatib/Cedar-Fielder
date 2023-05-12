@@ -73,11 +73,9 @@ echo '</script>';
 
   <!--MAIN-->
   <main>
-    <button id="browse-button" onclick="window.location.href='browse.php'">
-      <i class="fas fa-search"></i>
-      Browse
-    </button>
-
+    <div class="form-group text-center">
+      <button class="lgin-btn" type="submit">Search</button>
+    </div>
 
     <h1>Welcome to Sports Field Rentals!</h1>
     <section id="lately-posted">
