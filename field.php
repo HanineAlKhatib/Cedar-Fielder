@@ -32,34 +32,35 @@ $field = $fields[0];
   <div class="container field-description">
     <div class="row">
       <div class="col-md-12">
-        <img src="<?= $field['image_url']; ?>"  alt="Field Image" class="field-image" />
+        <img src="<?= $field['image_url']; ?>" alt="Field Image" class="field-image" />
       </div>
     </div>
     <div class="row">
       <div class="col-md-8">
-        <h1 class="field-name"><?=$field['name']?></h1>
+        <h1 class="field-name"><?= $field['name'] ?></h1>
         <div class="field-details">
           <div class="field-detail">
-            <strong>Size:</strong> <?=$field['size']?>
+            <strong>Size:</strong> <?= $field['size'] ?>
           </div>
-          <div class="field-detail"><strong>Sport Type:</strong> <?=$field['sport_type']?></div>
+          <div class="field-detail"><strong>Sport Type:</strong> <?= $field['sport_type'] ?></div>
           <div class="field-detail">
-            <strong>Location:</strong> <?=$field['address']?>
-          </div>
-          <div class="field-detail">
-            <strong>Indoor/Outdoor:</strong> <?=$field['type']?>
+            <strong>Location:</strong> <?= $field['address'] ?>
           </div>
           <div class="field-detail">
-            <strong>Description:</strong> <?=$field['description']?>
+            <strong>Indoor/Outdoor:</strong> <?= $field['type'] ?>
           </div>
           <div class="field-detail">
-            <strong>Days Open for Rent:</strong> <?=$field['open_hours']?> Till <?=$field['close_hours']?>
+            <strong>Description:</strong> <?= $field['description'] ?>
           </div>
           <div class="field-detail">
-            <strong>Price Per Hour:</strong> <?=$field['price_hour']?> $
+            <strong>Days Open for Rent:</strong> <?= date('h:i A', strtotime($field['open_hours'])) ?> Till <?= date('h:i A', strtotime($field['close_hours'])) ?>
+          </div>
+
+          <div class="field-detail">
+            <strong>Price Per Hour:</strong> <?= $field['price_hour'] ?> $
           </div>
           <div class="field-detail">
-            <strong>Rent Period:</strong> <?=$field['min_rent_hours']?> hours minimum
+            <strong>Rent Period:</strong> <?= $field['min_rent_hours'] ?> hours minimum
           </div>
         </div>
       </div>
