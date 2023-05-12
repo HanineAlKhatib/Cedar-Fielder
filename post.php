@@ -111,7 +111,7 @@
       <div class="row">
 
         <div class="col-md-6">
-          <div id="image-preview-container" style="max-height: 200px; overflow: hidden; padding-bottom: 10px;">
+          <div id="image-preview-container" style="overflow: hidden; padding-bottom: 10px;">
             <img id="image-preview" src="#" alt="Image Preview" style="display: none; max-width: 100%; max-height: 100%;">
           </div>
         </div>
