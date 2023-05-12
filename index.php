@@ -73,10 +73,11 @@ echo '</script>';
 
   <!--MAIN-->
   <main>
-    <form id="search-form" action="browse.php" method="GET">
-      <input type="text" id="search-input" name="search" placeholder="Search by field name or location" />
-      <button type="submit">Search</button>
-    </form>
+    <button id="browse-button" onclick="window.location.href='browse.php'">
+      <i class="fas fa-search"></i>
+      Browse
+    </button>
+
 
     <h1>Welcome to Sports Field Rentals!</h1>
     <section id="lately-posted">
@@ -127,7 +128,7 @@ echo '</script>';
   </footer>
   <!--SCRIPT-->
   <script src="./js/index.js"></script>
- 
+
 </body>
 
 </html>
