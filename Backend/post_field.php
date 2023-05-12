@@ -6,13 +6,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   // Retrieve the form data
   $name = $_POST['name'];
   $size = $_POST['size'];
-  $sportTypes = $_POST['sport-types'];
+  $sportTypes = $_POST['sportType'];
   $address = $_POST['address'];
   $type = $_POST['type'];
   $description = $_POST['description'];
   $openHours = $_POST['openHours'];
   $closeHours = $_POST['closeHours'];
-  $price = $_POST['price'];
   $minRentHours = $_POST['minRentHours'];
   $pricePerHours = $_POST['pricePerHours'];
   $image = $_FILES['image'];
@@ -32,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     'description' => $description,
     'openHours' => $openHours,
     'closeHours' => $closeHours,
-    'price' => $price,
+    'min_rent_hours' => $minRentHours,
     'price_hour' => $pricePerHours,
     'image_url' => $imageUrl
   );

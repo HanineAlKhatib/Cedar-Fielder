@@ -31,7 +31,7 @@
         <div class="col-md-6">
           <div class="mb-3">
             <label for="size" class="form-label">Field Size:</label>
-            <input type="number" class="form-control" id="size" name="size" step="0.01" required />
+            <input type="text" class="form-control" id="size" name="size" step="0.01" required />
           </div>
 
         </div>
@@ -39,7 +39,7 @@
       <div class="mb-3">
         <label for="sport-types" class="form-label">Sport Types:</label>
 
-        <select class="form-select" id="type" name="type" required>
+        <select class="form-select" id="type" name="sportType" required>
           <option value="football">Football</option>
           <option value="basketball">Basketball</option>
           <option value="tennis">Tennis</option>
