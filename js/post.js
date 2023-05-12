@@ -1,21 +1,4 @@
 
-  const openHoursInput = document.getElementById("openHours");
-  const closeHoursInput = document.getElementById("closeHours");
-
-  // Add event listener to check closing hours validity
-  openHoursInput.addEventListener("input", validateClosingHours);
-
-  function validateClosingHours() {
-    const openHours = openHoursInput.value;
-    const closeHours = closeHoursInput.value;
-    console.log(openHours);
-    console.log(closeHours);
-    if (closeHours < openHours) {
-      closeHoursInput.setCustomValidity("Closing hours cannot be before opening hours.");
-    } else {
-      closeHoursInput.setCustomValidity("");
-    }
-  }
 
   const imageInput = document.getElementById("image");
   const imagePreview = document.getElementById("image-preview");
