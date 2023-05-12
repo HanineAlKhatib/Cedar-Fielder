@@ -73,9 +73,7 @@ echo '</script>';
 
   <!--MAIN-->
   <main>
-    <div class="form-group text-center">
-      <button class="lgin-btn" type="submit">Search</button>
-    </div>
+
 
     <h1>Welcome to Sports Field Rentals!</h1>
     <section id="lately-posted">

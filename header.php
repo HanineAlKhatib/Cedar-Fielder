@@ -40,6 +40,7 @@ $phoneNumber = $_COOKIE['phone_number'];
 
       <div class="navbar-buttons">
         <button class="nav-btn profile-btn" id="home">Home</button>
+        <button class="nav-btn profile-btn" id="browse">Browse</button>
         <button class="nav-btn profile-btn" id="prf">Profile</button>
 
         <button class="nav-btn signout-btn" id="signOut">Sign out</button>
