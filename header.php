@@ -35,7 +35,10 @@ $phoneNumber = $_COOKIE['phone_number'];
 
 
   <nav class="nav">
-    <div class="navbar-brand">Cedar Fielder</div>
+    <a href="./index.php">
+      <div class="navbar-brand">Cedar Fielder</div>
+    </a>
+
     <div class="navbar-buttons">
 
       <div class="navbar-buttons">
