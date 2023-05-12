@@ -8,7 +8,8 @@
   function validateClosingHours() {
     const openHours = openHoursInput.value;
     const closeHours = closeHoursInput.value;
-
+    console.log(openHours);
+    console.log(closeHours);
     if (closeHours < openHours) {
       closeHoursInput.setCustomValidity("Closing hours cannot be before opening hours.");
     } else {
