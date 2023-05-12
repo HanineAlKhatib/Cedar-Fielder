@@ -4,12 +4,14 @@ $(document).ready(function() {
       
       // Get the min_rent_hours from the data attribute
       const minRentHours = $(this).data('min-rent-hours');
+      const fieldId = $(this).data('field-id');
       
       // Get the form data
       var formData = $(this).serialize();
       
       // Append the min_rent_hours to the form data
       formData += '&min-rent-hours=' + minRentHours;
+      formData += '&field-id=' + fieldId;
       
       // Make an AJAX request
       $.ajax({
