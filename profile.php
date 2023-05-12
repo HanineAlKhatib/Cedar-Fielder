@@ -67,7 +67,7 @@ $myRentedFields = $table->findSql("SELECT fields.*, rent_fields.created_at  FROM
             <div class="field-info">
               <h3><?= $field['name']; ?></h3>
               <h4><?= $field['sport_type']; ?></h4>
-              <p>Rented in<?= $field['created_at']; ?></p>
+              <p>Rented in <?= $field['created_at']; ?></p>
               <p><?= $field['address']; ?></p>
 
             </div>
