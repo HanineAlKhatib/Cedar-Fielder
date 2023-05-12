@@ -5,7 +5,7 @@ $phoneNumber = $_POST['phoneNumber'];
 $userId = $_POST['userId'];
 
 // Update the user's phone number in the database
-$query = "UPDATE users SET phoneNumber = :phoneNumber WHERE id = :userId";
+$query = "UPDATE users SET phone_number = :phoneNumber WHERE id = :userId";
 $result = $table->findSql($query, array('phoneNumber' => $phoneNumber, 'userId' => $userId));
 
 $response = array();
