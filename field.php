@@ -1,3 +1,12 @@
+<?php
+
+include('./Backend/db_config.php');
+$id = $_GET['id'];
+
+$fields = $table->findSql("Select * from fields where id = '$id'");
+$field = $fields[0];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -28,31 +37,29 @@
     </div>
     <div class="row">
       <div class="col-md-8">
-        <h1 class="field-name">Field Name</h1>
+        <h1 class="field-name"><?=$field['name']?></h1>
         <div class="field-details">
           <div class="field-detail">
-            <strong>Size:</strong> 100 x 50 yards
+            <strong>Size:</strong> <?=$field['size']?>
           </div>
-          <div class="field-detail"><strong>Sport Type:</strong> Soccer</div>
+          <div class="field-detail"><strong>Sport Type:</strong> <?=$field['sport_tyoe']?></div>
           <div class="field-detail">
-            <strong>Location:</strong> Cedar Park
-          </div>
-          <div class="field-detail">
-            <strong>Indoor/Outdoor:</strong> Outdoor
+            <strong>Location:</strong> <?=$field['address']?>
           </div>
           <div class="field-detail">
-            <strong>Description:</strong> Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit. Nunc scelerisque neque eu leo
-            lobortis, eu pellentesque augue vestibulum.
+            <strong>Indoor/Outdoor:</strong> <?=$field['type']?>
           </div>
           <div class="field-detail">
-            <strong>Days Open for Rent:</strong> Monday - Friday
+            <strong>Description:</strong> <?=$field['description']?>
           </div>
           <div class="field-detail">
-            <strong>Price:</strong> $100 per hour
+            <strong>Days Open for Rent:</strong> <?=$field['open_hours']?> Till <?=$field['close_hours']?>
           </div>
           <div class="field-detail">
-            <strong>Rent Period:</strong> 2 hours minimum
+            <strong>Price Per Hour:</strong> <?=$field['price_hour']?>
+          </div>
+          <div class="field-detail">
+            <strong>Rent Period:</strong> <?=$field['min_rent_hours']?> hours minimum
           </div>
         </div>
       </div>
