@@ -88,6 +88,7 @@ echo '</script>';
 
               <div class="field-info">
                 <h3><?= $field['name']; ?></h3>
+                <h4><?= $field['sport_type']; ?></h4>
                 <p><?= $field['address']; ?></p>
               </div>
             </a>
@@ -109,6 +110,7 @@ echo '</script>';
 
               <div class="field-info">
                 <h3><?= $field['name']; ?></h3>
+                <h4><?= $field['sport_type']; ?></h4>
                 <p><?= $field['address']; ?></p>
 
               </div>

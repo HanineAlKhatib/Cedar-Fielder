@@ -13,9 +13,9 @@ foreach ($searchedFields as $field) {
     echo '<img src="' . $field['image_url'] . '" alt="Field Image" />';
     echo '<div class="field-info">';
     echo '<h3>' . $field['name'] . '</h3>';
+    echo '<h4>' . $field['sport_type'] . '</h4>';
     echo '<p>' . $field['address'] . '</p>';
     echo '</div>';
     echo '</a>';
     echo '</div>';
 }
-?>

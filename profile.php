@@ -1,7 +1,7 @@
 <?php
 require_once('header.php');
 $mypostedField = $table->findSql("SELECT * FROM fields where owner_id = '$user_id'");
-$myRentedFields = $table->findSql("SELECT * FROM fields join rent_fields on rent_fields.field_id = fields.id   where rent_fields.user_id = '$user_id'");
+$myRentedFields = $table->findSql("SELECT fields.*, rent_fields.created_at  FROM fields join rent_fields on rent_fields.field_id = fields.id   where rent_fields.user_id = '$user_id'");
 ?>
 
 <!DOCTYPE html>
@@ -37,41 +37,44 @@ $myRentedFields = $table->findSql("SELECT * FROM fields join rent_fields on rent
   <section id="user-fields" class="mt-5">
     <h2>My Posted Fields</h2>
     <div class="field-list" id="most-rented-fields">
-        <?php foreach ($mypostedField as $field) : ?>
-          <div>
-            <a href="field.php?id=<?= $field['id']; ?>" class="field">
+      <?php foreach ($mypostedField as $field) : ?>
+        <div>
+          <a href="field.php?id=<?= $field['id']; ?>" class="field">
 
-              <img src="<?= $field['image_url']; ?>" alt="Field Image" />
+            <img src="<?= $field['image_url']; ?>" alt="Field Image" />
 
 
-              <div class="field-info">
-                <h3><?= $field['name']; ?></h3>
-                <p><?= $field['address']; ?></p>
+            <div class="field-info">
+              <h3><?= $field['name']; ?></h3>
+              <h4><?= $field['sport_type']; ?></h4>
+              <p><?= $field['address']; ?></p>
 
-              </div>
-            </a>
-          </div>
-        <?php endforeach; ?>
-      </div>
+            </div>
+          </a>
+        </div>
+      <?php endforeach; ?>
+    </div>
 
     <h2 class="mt-4">Rented Fields</h2>
     <div class="field-list" id="most-rented-fields">
-        <?php foreach ($myRentedFields as $field) : ?>
-          <div>
-            <a href="field.php?id=<?= $field['id']; ?>" class="field">
+      <?php foreach ($myRentedFields as $field) : ?>
+        <div>
+          <a href="field.php?id=<?= $field['id']; ?>" class="field">
 
-              <img src="<?= $field['image_url']; ?>" alt="Field Image" />
+            <img src="<?= $field['image_url']; ?>" alt="Field Image" />
 
 
-              <div class="field-info">
-                <h3><?= $field['name']; ?></h3>
-                <p><?= $field['address']; ?></p>
+            <div class="field-info">
+              <h3><?= $field['name']; ?></h3>
+              <h4><?= $field['sport_type']; ?></h4>
+              <h4>Rented in<?= $field['sport_type']; ?></h4>
+              <p><?= $field['address']; ?></p>
 
-              </div>
-            </a>
-          </div>
-        <?php endforeach; ?>
-      </div>
+            </div>
+          </a>
+        </div>
+      <?php endforeach; ?>
+    </div>
   </section>
 </main>
 
